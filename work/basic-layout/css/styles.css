@@ -7,7 +7,7 @@
     "header header"
     "nav main"
     "footer footer";
-    grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 header {
@@ -17,7 +17,7 @@ header {
   grid-area: header;
 }
 
-header .menubar .menu{
+header .menubar .menu {
   /* Text Layout Stuff */
   display: flex;
   flex-direction: row;
@@ -33,18 +33,14 @@ header .menubar .menu{
 }
 
 header .menubar .menu li {
-    padding: 20px;
+  padding: 20px;
 }
 
-
-
-header .menubar .menu li:hover{
-    background-color: rebeccapurple;
+header .menubar .menu li:hover {
+  background-color: rebeccapurple;
 }
 
 nav.local-menu {
-
-
   /* Flexbox */
   grid-area: nav;
 
@@ -55,18 +51,16 @@ nav.local-menu {
 nav.local-menu ul {
   list-style: none;
   padding: 20px 0 20px 20px;
-  /* padding: 3rem; */
-  /* padding: 0 0 0 20px; */
 }
 
 nav.local-menu ul li {
-    margin: 0 0 15px 0;
-    padding: 5px 0 5px 0;
+  margin: 0 0 15px 0;
+  padding: 5px 0 5px 0;
 }
 
 nav.local-menu ul li:hover {
-    background-color: plum;
-    margin: 0 0 15px 0
+  background-color: plum;
+  margin: 0 0 15px 0;
 }
 
 main {
