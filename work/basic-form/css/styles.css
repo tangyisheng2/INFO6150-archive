@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #da9f93;
+}
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #c1a3a3;
+}
+
+.navbar > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  max-width: 700px;
+}
+
+.navbar li {
+  padding: 20px;
+}
+
+.navbar li > a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar ul :hover {
+  background-color: #886f6f;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  border-radius: 1rem;
+  background-color: #694e4e;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 700px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.register-form h1 {
+  padding: 10px;
+}
+
+.register-form label {
+  margin: 10px;
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+.register-form input,
+select {
+  width: 100%;
+  display: block;
+}
+
+.register-form input[type="checkbox"] {
+  /* Revert checkbox into single line */
+  width: 1em;
+  display: inline;
+}
+
+.register-form button {
+  color: white;
+  background-color: #694e4e;
+  border: 2px solid;
+  border-radius: 1rem;
+  padding: 20px;
+}
+
+.required_mark {
+  color: red;
+}
+
+.footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  color: #694e4e;
+}
