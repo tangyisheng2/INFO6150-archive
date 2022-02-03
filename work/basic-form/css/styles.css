@@ -30,7 +30,7 @@ body {
 }
 
 .navbar li {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .navbar li > a {
@@ -55,7 +55,7 @@ body {
   width: 100%;
   max-width: 700px;
 
-  padding: 20px;
+  padding: 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -66,11 +66,11 @@ body {
 }
 
 .register-form h1 {
-  padding: 10px;
+  padding: 1rem;
 }
 
 .register-form label {
-  margin: 10px;
+  margin: 0.5rem;
   display: block;
   width: 100%;
   padding: 0;
@@ -84,7 +84,7 @@ select {
 
 .register-form input[type="checkbox"] {
   /* Revert checkbox into single line */
-  width: 1em;
+  width: 1rem;
   display: inline;
 }
 
@@ -93,7 +93,8 @@ select {
   background-color: #694e4e;
   border: 2px solid;
   border-radius: 1rem;
-  padding: 20px;
+  margin-top: 1rem;
+  padding: 1.5rem;
 }
 
 .required_mark {
