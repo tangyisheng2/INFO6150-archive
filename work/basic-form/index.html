@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cat Video Subscription</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="subsription.html">Subscription</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <form action="https://httpbin.org/post" method="post" class="register-form">
+            <h1>Register Your Cat Plan</h1>
+            <label>Full Name<span class="required_mark">*</span>
+                <input type="text" name="name" placeholder="Lelouch vi Britannia" required>
+            </label>
+            <label>Email Address<span class="required_mark">*</span>
+                <input type="email" name="email" placeholder="example@example.com" required>
+            </label>
+            <label>
+                <input type="checkbox" name="annoy_me" id="annoy_me_check_box">
+                Do you want us to send you annoying emails?
+            </label>
+            <label>Select Your Plan Tier
+                <span class="required_mark">*</span>
+                <select name="tier" required>
+                    <option value="">Select your plan, Sorry No Trail</option>
+                    <option value="1">Silver Tier</option>
+                    <option value="2">Gold Tier</option>
+                    <option value="3">Platinum Tier</option>
+                </select>
+            </label>
+            <button type="submit">Cats Forever!!!</button>
+        </form>
+    </main>
+    <footer class="footer">
+        © 1999-2022 Yisheng Tang.
+    </footer>
+</body>
+
+</html>
