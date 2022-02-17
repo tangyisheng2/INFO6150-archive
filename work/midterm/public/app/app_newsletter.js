@@ -3,6 +3,7 @@ const email = document.querySelector("#email");
 const name_ = document.querySelector("#name");
 const tier = document.querySelector("#tier");
 const form = document.querySelector(".newsletter__form");
+const checkbox = document.querySelector('input[type="checkbox"]');
 
 submitButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -17,6 +18,10 @@ submitButton.addEventListener("click", (event) => {
     }
     if (!tier.validity.valid) {
         tier.style.border = "2px solid red";
+        valid = false;
+    }
+    if (!checkbox.checked) {
+        checkbox.style.border = "2px solid red";
         valid = false;
     }
 
