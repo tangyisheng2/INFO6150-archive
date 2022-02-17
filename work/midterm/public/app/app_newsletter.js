@@ -1,10 +1,10 @@
-const submitButton = document.querySelector('.newsletter__submit');
-const email = document.querySelector('#email');
-const name_ = document.querySelector('#name');
-const tier = document.querySelector('#tier');
-const form = document.querySelector('.newsletter__form');
+const submitButton = document.querySelector(".newsletter__submit");
+const email = document.querySelector("#email");
+const name_ = document.querySelector("#name");
+const tier = document.querySelector("#tier");
+const form = document.querySelector(".newsletter__form");
 
-submitButton.addEventListener('click', (event) => {
+submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     let valid = true;
     if (!email.validity.valid) {
@@ -28,8 +28,8 @@ submitButton.addEventListener('click', (event) => {
     }
     if (!("success" in submitButton.attributes)) {
         if (valid) {
-            submitButton.toggleAttribute('success');
+            submitButton.toggleAttribute("success");
             submitButton.innerText = "Success";
         }
     }
-})
+});
