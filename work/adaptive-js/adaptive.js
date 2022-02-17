@@ -1,15 +1,14 @@
-const inputLabel = document.querySelector(".label__input");
-console.dir(inputLabel)
+const inputLabel = document.querySelector('.label__input');
+console.dir(inputLabel);
 
-const buttonAddLabel = document.querySelector(".add-form__submit");
+const buttonAddLabel = document.querySelector('.add-form__submit');
 buttonAddLabel.disabled = true;
 console.dir(buttonAddLabel);
 
 const outputLabel = document.querySelector('.info__report');
 console.dir(outputLabel);
 
-let inputValue = "";
-let inputValueCount = 0;
+const valueCount = {};
 
 inputLabel.addEventListener('input', () => {
     console.log(inputLabel.value);
@@ -18,17 +17,17 @@ inputLabel.addEventListener('input', () => {
     } else {
         buttonAddLabel.disabled = true;
     }
-})
+});
 
 buttonAddLabel.addEventListener('click', (event) => {
     event.preventDefault();
-    if (inputLabel.value === inputValue){
-        inputValueCount += 1;
-    } else {
-        inputValue = inputLabel.value;
-        inputValueCount = 1;
-    }
     inputValue = inputLabel.value;
-    console.log(`Add label: ${inputValue}`)
-    outputLabel.innerText = `The count for ${inputValue} is ${inputValueCount}`
-})
+    if (!(inputValue in valueCount)) {
+        valueCount[inputLabel.value] = 0;
+    }
+    valueCount[inputValue] += 1;
+    console.log(`Add label: ${inputValue}`);
+    outputLabel.innerText = `The count for ${inputValue} is ${
+        valueCount[inputLabel.value]
+    }`;
+});
