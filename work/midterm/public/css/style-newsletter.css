@@ -1,10 +1,5 @@
 .newsletter {
-    width: 100%;
-
-    padding: 2rem 3rem;
-
-    border: 3px solid #ba9f65;
-    border-radius: 1rem;
+    padding: 1rem 1.5rem;
 }
 
 .newsletter h1 {
@@ -65,9 +60,15 @@ select {
 
 @media (min-width: 600px) {
     .newsletter {
-        width: 100%;
         max-width: 700px;
+
+        border: 3px solid #ba9f65;
+        border-radius: 1rem;
+
+        margin: 1rem;
     }
+
+
 }
 @media (prefers-reduced-motion: no-preference) {
     .newsletter button:hover,
@@ -81,7 +82,7 @@ select {
         transition: color 0.2s;
     }
 
-    .newsletter button[success]{
+    .newsletter button[success] {
         border: 2px solid #042e27;
         background-color: #042e27;
         transition: background-color 0.2s, border 0.2s;
