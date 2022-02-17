@@ -4,6 +4,10 @@
     font-family: sans-serif;
 }
 
+.main-header {
+    font-size: 1rem;
+}
+
 .info {
     border: 1px solid black;
 
@@ -48,5 +52,9 @@
     .main-content {
         display: grid;
         grid-template-areas: "info add-form";
+    }
+
+    .main-header {
+        font-size: xx-large;
     }
 }
