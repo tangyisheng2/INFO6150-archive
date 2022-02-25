@@ -6,7 +6,7 @@ const form = document.querySelector(".newsletter__form");
 const checkbox = document.querySelector('input[type="checkbox"]');
 
 submitButton.addEventListener("click", (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     let valid = true;
     if (!email.validity.valid) {
         email.style.border = "2px solid red";
