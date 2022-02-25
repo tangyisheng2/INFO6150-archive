@@ -34,7 +34,7 @@
           <li class="comment">
             <span class="username">${comment.name}</span>
              (<span class="email">${comment.email}</span>): 
-             {comment.body}
+             ${comment.body}
           </li>
         `
                         )
