@@ -3,3 +3,5 @@ package-lock.json
 .DS_Store
 # Below includes dir that I used to have some experiment :)
 test
+# Prettier
+.prettierrc
