@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 (function () {
     // All caps because these are actual constants, not just const variables
     const MESSAGES = {
-        NETWORK_ERROR: "Unable to connect, please try again",
-        GENERIC_ERROR: "Something went wrong, please try again",
+        NETWORK_ERROR: 'Unable to connect, please try again',
+        GENERIC_ERROR: 'Something went wrong, please try again',
     };
 
     const state = {
@@ -14,7 +14,7 @@
         commentsForPost: {}, // only load comments for a post once - this doesn't detect NEW comments since load
     };
 
-    const postEl = document.querySelector(".posts");
+    const postEl = document.querySelector('.posts');
 
     loadPosts();
     addAbilityToTogglePosts();
@@ -25,44 +25,45 @@
         const html = state.posts
             .map((post) => {
                 const isActive = post.id === Number(state.activePostId);
-                let commentsHtml = "";
+                let commentsHtml = '';
 
                 if (state.commentsForPost[post.id]) {
                     commentsHtml = state.commentsForPost[post.id]
                         .map(
                             (comment) => `
           <li class="comment">
-            <!-- FILL IN - show the comment parts per README -->
-            ${comment.name}${comment.email}${comment.body}
+            <span class="username">${comment.name}</span>
+             (<span class="email">${comment.email}</span>): 
+             {comment.body}
           </li>
         `
                         )
-                        .join("");
+                        .join('');
                 }
                 return `
-        <li class="post ${isActive ? "post--active" : ""}">
-          <a class="post__title" data-id="${post.id}" href="#${post.id}">${post.title
-                    }</a>
-          <!-- FILL IN - show the post body here! -->
+        <li class="post ${isActive ? 'post--active' : ''}">
+          <a class="post__title" data-id="${post.id}" href="#${post.id}">${
+                    post.title
+                }</a>
           <ul class="post__comments">
             ${commentsHtml}
           </ul>
         </li>
       `;
             })
-            .join("");
+            .join('');
         postEl.innerHTML = html;
-        updateStatus("");
+        updateStatus('');
     }
 
     function loadPosts() {
-        fetch("https://jsonplaceholder.typicode.com/posts")
-            .catch(() => Promise.reject("NETWORK_ERROR"))
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .catch(() => Promise.reject('NETWORK_ERROR'))
             .then((response) => {
                 if (response.ok) {
                     return response.json();
                 }
-                return Promise.reject("GENERIC_ERROR");
+                return Promise.reject('GENERIC_ERROR');
             })
             .then((posts) => {
                 state.posts = posts;
@@ -72,30 +73,33 @@
     }
 
     function updateStatus(message) {
-        const statusEl = document.querySelector(".status");
+        const statusEl = document.querySelector('.status');
         if (message) {
             statusEl.innerText = MESSAGES[message] || MESSAGES.GENERIC_ERROR;
         } else {
-            statusEl.innerText = "";
+            statusEl.innerText = '';
         }
     }
 
     function addAbilityToTogglePosts() {
-        postEl.addEventListener("click", (e) => {
+        postEl.addEventListener('click', (e) => {
             // FILL IN - Let posts show/not show comments per README
             // set/unset state.activePostId as needed
             // call loadComments() with a postId when done
+            // Get Post id
+            state.activePostId = e.target.attributes['data-id'].value;
+            loadComments(state.activePostId);
         });
     }
 
     function loadComments(postId) {
         fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
-            .catch(() => Promise.reject("NETWORK_ERROR"))
+            .catch(() => Promise.reject('NETWORK_ERROR'))
             .then((response) => {
                 if (response.ok) {
                     return response.json();
                 }
-                return Promise.reject("GENERIC_ERROR");
+                return Promise.reject('GENERIC_ERROR');
             })
             .then((comments) => {
                 state.commentsForPost[postId] = comments;
