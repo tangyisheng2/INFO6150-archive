@@ -3,6 +3,7 @@ package-lock.json
 .DS_Store
 # Below includes dir that I used to have some experiment :)
 test
+# midterm
 work/midterm/public/css/style-backup.css
 work/midterm/public/content/introduction.html
 work/midterm/public/content/news.html
