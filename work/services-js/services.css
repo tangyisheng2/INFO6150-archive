@@ -43,6 +43,14 @@ body {
 
 .post__comments {
     border: 2px solid var(--hightlight-color);
+    border-top: 1px solid var(--hightlight-color);
+
+    padding: 1rem;
+}
+
+.post__body {
+    border: 2px solid var(--hightlight-color);
+    border-bottom: 1px solid var(--hightlight-color);
 
     padding: 1rem;
 }
@@ -54,7 +62,8 @@ body {
     color: var(--font-color);
 }
 
-.post > .post__comments {
+.post > .post__comments,
+.post > .post__body {
     display: none;
 }
 
@@ -64,7 +73,8 @@ body {
     border-bottom: 2px solid var(--background-color);
 }
 
-.post.post--active > .post__comments {
+.post.post--active > .post__comments,
+.post.post--active > .post__body {
     display: block;
 }
 
