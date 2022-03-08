@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: false }));
 app.post('/form', (req, res) => {
   const fields = req.body;
   console.log(fields);
-  res.redirect('content/form.html');
+  res.redirect('/form.html');
 });
 
 app.use(express.static('public'));
