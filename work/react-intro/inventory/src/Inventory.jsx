@@ -10,11 +10,42 @@ function Inventory() {
         {itemName}: {inventory}
       </p>
       <div className="operation">
-        <label>Set Item Name: <input type="text" onInput={(e) => setItemName(e.target.value ? e.target.value : "Default Item")}/></label>
-        <button className="add" onClick={() => {setInventory(inventory + 1)}}>+</button>
-        <button className="minus" disabled={!inventory} onClick={() => {setInventory(inventory - 1)} }>-</button>  
-        <button className="reorder" onClick={() => {setInventory(5)}}>Reorder</button>
-        
+        <label className="name__operation">
+          Set Item Name:{" "}
+          <input
+            type="text"
+            onInput={(e) =>
+              setItemName(e.target.value ? e.target.value : "Default Item")
+            }
+          />
+        </label>
+        <div className="inventory__operation">
+        <button
+          className="add"
+          onClick={() => {
+            setInventory(inventory + 1);
+          }}
+        >
+          +
+        </button>
+        <button
+          className="minus"
+          disabled={!inventory}
+          onClick={() => {
+            setInventory(inventory - 1);
+          }}
+        >
+          -
+        </button>
+        <button
+          className={`reorder ${inventory ? "hidden" : ""}`}
+          onClick={() => {
+            setInventory(5);
+          }}
+        >
+          Reorder
+        </button>
+        </div>
       </div>
     </div>
   );
