@@ -48,7 +48,7 @@ body {
 .inventory .operation label,
 .inventory .operation button {
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.3rem 1rem;
 }
 
 .operation {
@@ -57,7 +57,7 @@ body {
 }
 
 .inventory__operation .reorder {
-  transition: opacity 1s;
+  transition: opacity 0.2s;
 }
 
 .inventory__operation .hidden {
