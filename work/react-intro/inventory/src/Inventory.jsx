@@ -1,0 +1,22 @@
+import { useState } from "react";
+
+function Inventory() {
+  const [itemName, setItemName] = useState("Default Item");
+  const [inventory, setInventory] = useState(5);
+
+  return (
+    <div className="inventory">
+      <p className="current-inventory">
+        {itemName}: {inventory}
+      </p>
+      <div className="operation">
+        <label>Set Item Name: <input type="text" onInput={(e) => setItemName(e.target.value ? e.target.value : "Default Item")}/></label>
+        <button className="add" onClick={() => {setInventory(inventory + 1)}}>+</button>
+        <button className="minus" disabled={!inventory} onClick={() => {setInventory(inventory - 1)} }>-</button>  
+        <button className="reorder" onClick={() => {setInventory(5)}}>Reorder</button>
+        
+      </div>
+    </div>
+  );
+}
+export default Inventory;
