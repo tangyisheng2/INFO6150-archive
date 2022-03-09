@@ -5,13 +5,61 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  --background-color: #170606;
+  --hightlight-color: #ba9f65;
+  --unfocus-color: white;
+  --font-color: white;
+
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-label {
+.inventory label {
   display: block;
+}
+
+.inventory label input {
+  background-color: var(--background-color);
+
+  color: var(--font-color);
+
+  border: 2px solid var(--hightlight-color);
+  border-radius: 1rem;
+
+  padding: 0.3rem;
+}
+
+.inventory .operation button {
+  background-color: var(--background-color);
+
+  color: var(--font-color);
+
+  border: 2px solid var(--hightlight-color);
+  border-radius: 1rem;
+}
+
+.inventory .operation label,
+.inventory .operation button {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.operation {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory__operation .reorder {
+  transition: opacity 1s;
+}
+
+.inventory__operation .hidden {
+  opacity: 0;
 }
