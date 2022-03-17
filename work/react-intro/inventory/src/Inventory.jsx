@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Reorder from "./Reorder";
 
 function Inventory() {
   const [itemName, setItemName] = useState("Default Item");
@@ -20,31 +21,24 @@ function Inventory() {
           />
         </label>
         <div className="inventory__operation">
-        <button
-          className="add"
-          onClick={() => {
-            setInventory(inventory + 1);
-          }}
-        >
-          +
-        </button>
-        <button
-          className="minus"
-          disabled={!inventory}
-          onClick={() => {
-            setInventory(inventory - 1);
-          }}
-        >
-          -
-        </button>
-        <button
-          className={`reorder ${inventory ? "hidden" : ""}`}
-          onClick={() => {
-            setInventory(5);
-          }}
-        >
-          Reorder
-        </button>
+          <button
+            className="add"
+            onClick={() => {
+              setInventory(inventory + 1);
+            }}
+          >
+            +
+          </button>
+          <button
+            className="minus"
+            disabled={!inventory}
+            onClick={() => {
+              setInventory(inventory - 1);
+            }}
+          >
+            -
+          </button>
+          {inventory ? <div className="wrapper hidden"><Reorder onReorder={setInventory}/></div> : <div className="wrapper"><Reorder onReorder={setInventory}/></div>}
         </div>
       </div>
     </div>

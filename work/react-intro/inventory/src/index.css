@@ -56,10 +56,14 @@ body {
   flex-direction: column;
 }
 
-.inventory__operation .reorder {
+.inventory__operation .wrapper {
+  display: inline-block;
+  opacity: 100%;
   transition: opacity 0.2s;
+  
 }
 
-.inventory__operation .hidden {
-  opacity: 0;
+.inventory__operation .wrapper.hidden {
+  opacity: 0%;
+  
 }
