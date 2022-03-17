@@ -4,6 +4,11 @@ import Reorder from "./Reorder";
 function Inventory() {
   const [itemName, setItemName] = useState("Default Item");
   const [inventory, setInventory] = useState(5);
+  let reorderWrapperClassName = "wrapper hidden";
+
+  if (!inventory) {
+    reorderWrapperClassName = "wrapper";
+  }
 
   return (
     <div className="inventory">
@@ -38,15 +43,9 @@ function Inventory() {
           >
             -
           </button>
-          {inventory ? (
-            <div className="wrapper hidden">
-              <Reorder onReorder={setInventory} />
-            </div>
-          ) : (
-            <div className="wrapper">
-              <Reorder onReorder={setInventory} />
-            </div>
-          )}
+          <div className={reorderWrapperClassName}>
+            <Reorder />
+          </div>
         </div>
       </div>
     </div>
