@@ -11,7 +11,7 @@ function Inventory() {
         {itemName}: {inventory}
       </p>
       <div className="operation">
-        <label className="name__operation">
+        <label className="name-operation">
           Set Item Name:{" "}
           <input
             type="text"
@@ -20,7 +20,7 @@ function Inventory() {
             }
           />
         </label>
-        <div className="inventory__operation">
+        <div className="inventory-operation">
           <button
             className="add"
             onClick={() => {
@@ -38,7 +38,15 @@ function Inventory() {
           >
             -
           </button>
-          {inventory ? <div className="wrapper hidden"><Reorder onReorder={setInventory}/></div> : <div className="wrapper"><Reorder onReorder={setInventory}/></div>}
+          {inventory ? (
+            <div className="wrapper hidden">
+              <Reorder onReorder={setInventory} />
+            </div>
+          ) : (
+            <div className="wrapper">
+              <Reorder onReorder={setInventory} />
+            </div>
+          )}
         </div>
       </div>
     </div>
