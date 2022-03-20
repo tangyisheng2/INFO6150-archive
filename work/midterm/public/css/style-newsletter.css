@@ -1,0 +1,110 @@
+.newsletter {
+    padding: 1rem 1.5rem;
+}
+
+.newsletter h1 {
+    text-align: center;
+
+    margin: 1rem;
+}
+
+.newsletter__form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter label {
+    margin: 0.5rem 0;
+}
+
+.newsletter label,
+input,
+select,
+button {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.newsletter input,
+select {
+    color: white;
+
+    border: 1px solid #ba9f65;
+    background-color: #170607;
+    border-radius: 1rem;
+
+    padding: 0.2rem 0.5rem;
+}
+
+.newsletter input[type="checkbox"] {
+    display: inline-block;
+    width: fit-content;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.newsletter button {
+    max-width: 7rem;
+
+    padding: 0.5rem;
+    margin: 1rem;
+
+    color: white;
+    background-color: #170607;
+    border: 2px solid #ba9f65;
+    border-radius: 1rem;
+}
+
+.newsletter__success {
+    font-size: larger;
+
+    padding: 1rem;
+}
+
+.newsletter__success a {
+    color: #ba9f65;
+}
+
+h1.newsletter__success  {
+    font-size: 2rem;
+
+    text-align: center;
+}
+
+span.newsletter__success {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .newsletter {
+        max-width: 700px;
+
+        border: 3px solid #ba9f65;
+        border-radius: 1rem;
+
+        margin: 1rem;
+    }
+
+
+}
+@media (prefers-reduced-motion: no-preference) {
+    .newsletter button:hover,
+    .newsletter button:focus-within {
+        background-color: #ba9f65;
+        transition: background-color 0.2s 0.2s;
+    }
+
+    .newsletter button:active {
+        color: #170607;
+        transition: color 0.2s;
+    }
+
+    .newsletter button[success] {
+        border: 2px solid #042e27;
+        background-color: #042e27;
+        transition: background-color 0.2s, border 0.2s;
+    }
+}
