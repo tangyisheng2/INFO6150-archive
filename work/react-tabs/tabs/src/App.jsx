@@ -12,9 +12,9 @@ function App() {
     //     myUniversity: 'Northeastern University',
     // };
     let data = {
-      name: "Yisheng Tang",
-      NUID: "002193735",
-      Amademic: "Northeastern University"
+        "Fav Food": "Ramen Please!🍜",
+        "Fav Drink": "Boba Milktea!🥤",
+        "Fav Snack": "Chocolate 🍫"
     }
     return (
         <div className="app">
