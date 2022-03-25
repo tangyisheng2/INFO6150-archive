@@ -1,5 +1,5 @@
 import './App.css';
-import ShowObject from './ShowObject';
+// import ShowObject from './ShowObject';
 import Tabs from './Tabs';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
     }
     return (
         <div className="app">
+            <h1>Take a Guess of my Favourite</h1>
             <Tabs entry={data}/>
             {/* <ShowObject entry={data}/> */}
         </div>
