@@ -18,6 +18,11 @@
     --font-color: white;
 }
 
+h1 {
+    color: var(--font-color);
+    padding: 1rem;
+}
+
 .tab__title__list {
     list-style: none;
 
@@ -37,7 +42,7 @@
     font-size: x-large;
     color: var(--font-color);
 
-    border: 2px solid var(--background-color);
+    border: 2px solid var(--unfocus-color);
     border-radius: 1rem 1rem 0 0;
 }
 
@@ -53,8 +58,9 @@
 .tab__content {
     background-color: var(--hightlight-color);
 
-    border: 2px solid black;
+    border: 2px solid var(--unfocus-color);
     padding: 1rem;
 
+    color: var(--font-color);
     font-size: large;
 }
