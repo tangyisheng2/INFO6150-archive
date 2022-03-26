@@ -12,14 +12,14 @@ function App() {
     //     myUniversity: 'Northeastern University',
     // };
     let data = {
-        "Fav Food": "Ramen Please!🍜",
-        "Fav Drink": "Boba Milktea!🥤",
-        "Fav Snack": "Chocolate 🍫"
-    }
+        'Fav Food': 'Ramen Please!🍜',
+        'Fav Drink': 'Boba Milktea!🥤',
+        'Fav Snack': 'Chocolate 🍫',
+    };
     return (
         <div className="app">
             <h1>Take a Guess of my Favourite</h1>
-            <Tabs entry={data}/>
+            <Tabs entry={data} />
             {/* <ShowObject entry={data}/> */}
         </div>
     );
