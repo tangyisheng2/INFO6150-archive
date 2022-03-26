@@ -11,3 +11,5 @@ work/midterm/public/content/newsletter.html
 # Prettier
 .prettierrc
 work/adaptive-js/.prettierrc.js
+# Ignore react playground
+work/react-test
