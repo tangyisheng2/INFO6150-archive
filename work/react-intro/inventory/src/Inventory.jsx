@@ -44,7 +44,7 @@ function Inventory() {
             -
           </button>
           <div className={reorderWrapperClassName}>
-            <Reorder />
+            <Reorder onReorder={setInventory}/>
           </div>
         </div>
       </div>
