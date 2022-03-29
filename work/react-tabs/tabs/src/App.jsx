@@ -15,6 +15,7 @@ function App() {
         'Fav Food': 'Ramen Please!🍜',
         'Fav Drink': 'Boba Milktea!🥤',
         'Fav Snack': 'Chocolate 🍫',
+        'Other': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, aperiam! Aperiam at quidem iste, facilis repellat consequuntur praesentium voluptatum quisquam explicabo, voluptate, unde laboriosam. Excepturi nisi soluta quas debitis dolorum porro? Accusantium dignissimos doloribus harum sit ipsam commodi pariatur amet sequi dolore sed. Repudiandae odio nobis cum quaerat rerum dolores.'
     };
     return (
         <div className="app">
