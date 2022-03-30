@@ -10,7 +10,7 @@ function Tabs(entry) {
             <ul className="tab__title__list">
                 {Object.keys(data).map((title) => {
                     return (
-                        <li>
+                        <li key={title}>
                             <button
                                 onClick={() => {
                                     setActiveTabTitle(title);
