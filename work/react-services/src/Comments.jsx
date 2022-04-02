@@ -11,7 +11,7 @@ function Comments({ postId, comments, saveComments, setError }) {
 
   return (
     <>
-    { isLoading && <div className='gg-spinner'> Replace with spinner</div> }
+    { isLoading && <div className='gg-spinner'></div> }
     { !isLoading && <div> Replace with comment HTML</div> }
     </>
   );

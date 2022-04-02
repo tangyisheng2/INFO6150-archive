@@ -40,7 +40,7 @@ function Posts() {
                     {posts.map((post) => {
                         return (
                             <li key={`post-${post.id}`}>
-                                <div>
+                                <div onClick={() => setActivePostId(post.id)}>
                                   {post.title}
                                 </div>
                                 {activePostId === post.id && (
