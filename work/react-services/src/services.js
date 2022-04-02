@@ -5,6 +5,7 @@ export function fetchPostsList() {
   })
   .then(
     () => fetch('https://jsonplaceholder.typicode.com/posts/', {
+      // () => fetch('http://localhost', {
       method: 'GET',
     })
   )
