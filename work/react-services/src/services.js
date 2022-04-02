@@ -10,6 +10,7 @@ export function fetchPostsList() {
   )
   .catch( () => Promise.reject('networkError') )
   .then( response => {
+    
     if(response.ok) {
       return response.json();
     }

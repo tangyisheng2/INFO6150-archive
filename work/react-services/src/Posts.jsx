@@ -35,7 +35,7 @@ function Posts() {
   return (
     <>
     <div className="status">{ /* Fill In */}</div>
-    { !posts && <div>Replace with spinner</div> }
+    { !posts && <div className='gg-spinner'></div> }
     { posts && (
       <ul className="posts">
         { posts.map( post => {

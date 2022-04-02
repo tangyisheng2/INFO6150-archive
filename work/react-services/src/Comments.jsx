@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { fetchCommentsForPostId } from './services';
+import './spinner.css'
 
 function Comments({ postId, comments, saveComments, setError }) {
 
@@ -10,7 +11,7 @@ function Comments({ postId, comments, saveComments, setError }) {
 
   return (
     <>
-    { isLoading && <div> Replace with spinner</div> }
+    { isLoading && <div className='gg-spinner'> Replace with spinner</div> }
     { !isLoading && <div> Replace with comment HTML</div> }
     </>
   );
