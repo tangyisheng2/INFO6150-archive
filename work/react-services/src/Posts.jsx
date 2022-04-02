@@ -30,6 +30,7 @@ function Posts() {
     // Students: You will need to add to/modify this file
     // The data structures shown are not the only way to do it
     // but are a valid suggestion
+    console.log(posts)
     return (
         <>
             <div className="status">{error}</div>
@@ -40,8 +41,7 @@ function Posts() {
                         return (
                             <li key={`post-${post.id}`}>
                                 <div>
-                                    replace with post HTML and ability to set
-                                    activePostId
+                                  {post.title}
                                 </div>
                                 {activePostId === post.id && (
                                     <Comments
