@@ -9,9 +9,6 @@ function Comments({ postId, comments, saveComments, setError }) {
     const isLoading = !comments;
 
     useEffect(() => {
-
-
-
         fetchCommentsForPostId(postId)
             .then((fetchedComments) => {
                 console.log(fetchedComments);
@@ -34,11 +31,11 @@ function Comments({ postId, comments, saveComments, setError }) {
             {isLoading && <div className="gg-spinner"></div>}
             {!isLoading && (
                 <div className={'comment-' + postId}>
-                    <p className='comment-prompt'>Comments:</p>
+                    <p className="comment-prompt">Comments:</p>
                     <ul className="comment-list">
                         {comments.map((entry) => {
                             return (
-                                <li className='comment'>
+                                <li className="comment">
                                     <span className="comment-author">
                                         {entry.name}{' '}
                                     </span>

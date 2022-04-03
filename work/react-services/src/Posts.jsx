@@ -9,13 +9,13 @@ function Posts() {
     const [commentsForPostId, setCommentsForPostId] = useState({});
 
     function saveCommentsForPostId(postId, comments) {
-        console.log("Comments: ");
+        console.log('Comments: ');
         console.dir(commentsForPostId);
-        console.log(commentsForPostId[1])
+        console.log(commentsForPostId[1]);
         setCommentsForPostId({
             ...commentsForPostId,
             [postId]: comments,
-        })
+        });
     }
 
     useEffect(() => {
@@ -24,7 +24,7 @@ function Posts() {
                 setPosts(loadedPosts);
             })
             .catch((error) => {
-              // Error handling using error state, shown in div.status
+                // Error handling using error state, shown in div.status
                 if (error === 'networkError') {
                     setError('Oops, got network errors, try again');
                 } else if (error === 'serviceError') {
@@ -44,24 +44,37 @@ function Posts() {
                 <ul className="posts">
                     {posts.map((post) => {
                         return (
-                            <li key={`post-${post.id}`} className={activePostId === post.id ? 'post active' : 'post'}>
-                                <div onClick={() => setActivePostId(post.id)} className='post-title'>
-                                  {post.title}
+                            <li
+                                key={`post-${post.id}`}
+                                className={
+                                    activePostId === post.id
+                                        ? 'post active'
+                                        : 'post'
+                                }
+                            >
+                                <div
+                                    onClick={() => setActivePostId(post.id)}
+                                    className="post-title"
+                                >
+                                    {post.title}
                                 </div>
                                 {activePostId === post.id && (
                                     <>
-                                    <p className='post-body'>{post.body}</p>
-                                    <Comments
-                                        postId={post.id}
-                                        comments={commentsForPostId[post.id]}
-                                        saveComments={(comments) =>
-                                            saveCommentsForPostId(
-                                                post.id,
-                                                comments
-                                            )
-                                        }
-                                        setError={setError}
-                                    /></>
+                                        <p className="post-body">{post.body}</p>
+                                        <Comments
+                                            postId={post.id}
+                                            comments={
+                                                commentsForPostId[post.id]
+                                            }
+                                            saveComments={(comments) =>
+                                                saveCommentsForPostId(
+                                                    post.id,
+                                                    comments
+                                                )
+                                            }
+                                            setError={setError}
+                                        />
+                                    </>
                                 )}
                             </li>
                         );
