@@ -1,6 +1,8 @@
 .gg-spinner {
     transform: scale(var(--ggs, 1));
 
+    color: white;
+
     margin: 0.5rem;
 }
 
