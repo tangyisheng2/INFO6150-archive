@@ -49,6 +49,8 @@ function Posts() {
                                   {post.title}
                                 </div>
                                 {activePostId === post.id && (
+                                    <>
+                                    <p className='post-body'>{post.body}</p>
                                     <Comments
                                         postId={post.id}
                                         comments={commentsForPostId[post.id]}
@@ -59,7 +61,7 @@ function Posts() {
                                             )
                                         }
                                         setError={setError}
-                                    />
+                                    /></>
                                 )}
                             </li>
                         );
