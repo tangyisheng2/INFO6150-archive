@@ -9,7 +9,13 @@ function Posts() {
     const [commentsForPostId, setCommentsForPostId] = useState({});
 
     function saveCommentsForPostId(postId, comments) {
-        // Students:Fill in
+        console.log("Comments: ");
+        console.dir(commentsForPostId);
+        console.log(commentsForPostId[1])
+        setCommentsForPostId({
+            ...commentsForPostId,
+            [postId]: comments,
+        })
     }
 
     useEffect(() => {
@@ -30,7 +36,6 @@ function Posts() {
     // Students: You will need to add to/modify this file
     // The data structures shown are not the only way to do it
     // but are a valid suggestion
-    console.log(posts)
     return (
         <>
             <div className="status">{error}</div>

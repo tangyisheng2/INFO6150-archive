@@ -1,7 +1,7 @@
 export function fetchPostsList() {
   return new Promise( (resolve) => {
     // This inserts a 2 second delay so we can easily see a spinner at work
-    setTimeout( resolve, 2000);
+    setTimeout( resolve, 50);
   })
   .then(
     () => fetch('https://jsonplaceholder.typicode.com/posts/', {
@@ -22,7 +22,7 @@ export function fetchPostsList() {
 export function fetchCommentsForPostId(postId) {
   return new Promise( (resolve) => {
     // This inserts a 2 second delay so we can easily see a spinner at work
-    setTimeout( resolve, 2000);
+    setTimeout( resolve, 50);
   })
   .then(
     () => fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`, {
