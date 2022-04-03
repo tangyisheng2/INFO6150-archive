@@ -32,8 +32,10 @@ body {
     border: 4px dotted transparent;
 }
 
-.post.active .post-title {
-    color: var(--hightlight-color);
+.post-title a {
+    color: var(--font-color);
+
+    text-decoration: none;
 }
 
 .post:hover,
@@ -42,8 +44,12 @@ body {
     border: 4px dotted var(--hightlight-color);
 }
 
-.post-title:hover,
-.post-title:focus-within {
+.post.active .post-title a {
+    color: var(--hightlight-color);
+}
+
+.post-title:hover a,
+.post-title:focus-within a {
     color: var(--hightlight-color);
 
     cursor: pointer;
@@ -72,7 +78,7 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .post-title {
+    .post-title a {
         transition: color 0.25s;
     }
 

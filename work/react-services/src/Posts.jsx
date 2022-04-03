@@ -56,7 +56,7 @@ function Posts() {
                                     onClick={() => setActivePostId(post.id)}
                                     className="post-title"
                                 >
-                                    {post.title}
+                                    <a href={`#${post.id}`}>{post.title}</a>
                                 </div>
                                 {activePostId === post.id && (
                                     <>
