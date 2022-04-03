@@ -32,6 +32,10 @@ body {
     border: 4px dotted transparent;
 }
 
+.post.active .post-title {
+    color: var(--hightlight-color);
+}
+
 .post:hover,
 .post:focus-within,
 .post.active {
