@@ -9,6 +9,9 @@ function Comments({ postId, comments, saveComments, setError }) {
     const isLoading = !comments;
 
     useEffect(() => {
+
+
+
         fetchCommentsForPostId(postId)
             .then((fetchedComments) => {
                 console.log(fetchedComments);
@@ -34,7 +37,7 @@ function Comments({ postId, comments, saveComments, setError }) {
                     <ul className="comment-list">
                         {comments.map((entry) => {
                             return (
-                                <li>
+                                <li className='comment'>
                                     <span className="comment-author">
                                         {entry.name}{' '}
                                     </span>
