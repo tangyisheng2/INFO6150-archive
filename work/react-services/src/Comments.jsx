@@ -34,6 +34,7 @@ function Comments({ postId, comments, saveComments, setError }) {
             {isLoading && <div className="gg-spinner"></div>}
             {!isLoading && (
                 <div className={'comment-' + postId}>
+                    <p className='comment-prompt'>Comments:</p>
                     <ul className="comment-list">
                         {comments.map((entry) => {
                             return (

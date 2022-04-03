@@ -49,9 +49,17 @@ body {
     padding: 1rem 0;
 }
 
-.comment {
-    margin: 1rem;
+.comment-prompt {
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--hightlight-color);
 }
+
+.comment {
+    margin: 0.5rem;
+}
+
+
 
 .comment-author {
     color: var(--hightlight-color);
