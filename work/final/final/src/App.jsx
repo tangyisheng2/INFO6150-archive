@@ -11,7 +11,7 @@ import NavBar from './componeents/NavBar';
 import NotFound from './componeents/NotFound';
 
 function App() {
-    const [showingPage, setShowingPage] = useState('santacruz');
+    const [showingPage, setShowingPage] = useState('form');
 
     return (
         <div className="app">
