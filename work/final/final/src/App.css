@@ -1,3 +1,15 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --highlight-color: #ba9f65;
+  --background-color: #140505;
+  --font-color: white;
+}
+
 .app {
   text-align: center;
 }
