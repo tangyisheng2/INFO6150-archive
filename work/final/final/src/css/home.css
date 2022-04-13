@@ -1,0 +1,12 @@
+.main {
+    color: var(--font-color);
+
+    margin: 3rem 1rem;
+    font-size: larger;
+    line-height: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
