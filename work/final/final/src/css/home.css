@@ -10,3 +10,8 @@
     justify-content: center;
     align-items: center;
 }
+
+.main p {
+    font-size: rem;
+    margin: 0.3rem 0;
+}
