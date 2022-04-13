@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../css/form.css'
+import '../css/form.css';
 function Form() {
     const [formData, setFormData] = useState({});
     const [errorMsg, setErrorMsg] = useState();
@@ -9,6 +9,8 @@ function Form() {
         console.log(formData);
     };
 
+    // This function checks the value while the user types
+    // @return: bool
     const checkValid = (type, e) => {
         console.log(e);
         if (type === 'text') {
@@ -42,9 +44,11 @@ function Form() {
         return false;
     };
 
+    // This function checks the completeness of the form and generates error message
+    // @return: bool
     const checkComplete = (data) => {
         const inCompleteSectionName = [];
-        console.log(data)
+        console.log(data);
         if (!('name' in data)) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the name';
@@ -57,15 +61,15 @@ function Form() {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the tier';
         }
-        if (!(data.agreed)) {
+        if (!data.agreed) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please agree our TOS';
         }
-        setErrorMsg(inCompleteSectionName.map((entry) => {
-            return (
-                <p className='form__errmsg'>{entry}</p>
-            )
-        }));
+        setErrorMsg(
+            inCompleteSectionName.map((entry) => {
+                return <p className="form__errmsg">{entry}</p>;
+            })
+        );
     };
     return (
         <div className="form">
