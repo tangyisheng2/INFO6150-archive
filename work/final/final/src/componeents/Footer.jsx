@@ -3,11 +3,12 @@ function Footer({setShowingPage, pageData}){
     console.log(pageData)
     return (
         <footer>
-            <p>© 1999-2022 Yisheng Tang.</p>
+            {/* <li>© 1999-2022 Yisheng Tang.</li> */}
             <ul>
+            <li>© 1999-2022 Yisheng Tang.</li>
             {Object.keys(pageData).map((entry) => {
                 return (
-                    <li>Check out our <a onClick={() => {setShowingPage(pageData[entry])}}>{entry}</a></li>
+                    <li><a href={`#/${pageData[entry]}`} onClick={() => {setShowingPage(pageData[entry])}}>{entry}</a></li>
                 )
             })}
             </ul>

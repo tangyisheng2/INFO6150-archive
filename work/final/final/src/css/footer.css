@@ -10,6 +10,11 @@
     padding: 1rem;
 }
 
+.footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
 a {
     color: var(--highlight-color);
     cursor: pointer;
