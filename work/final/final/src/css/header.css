@@ -37,3 +37,8 @@
 
     text-align: center;
 }
+
+.header:hover,
+.header:focus-within {
+    color: var(--font-color);
+}
