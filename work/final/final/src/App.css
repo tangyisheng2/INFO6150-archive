@@ -12,6 +12,13 @@
 
 .app {
   text-align: center;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 

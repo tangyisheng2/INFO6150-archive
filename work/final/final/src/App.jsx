@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './css/styles.css'
 import Footer from './componeents/Footer';
 import Form from './componeents/Form';
 import Header from './componeents/Header';
@@ -11,7 +12,7 @@ import NavBar from './componeents/NavBar';
 import NotFound from './componeents/NotFound';
 
 function App() {
-    const [showingPage, setShowingPage] = useState('form');
+    const [showingPage, setShowingPage] = useState('home');
 
     return (
         <div className="app">
