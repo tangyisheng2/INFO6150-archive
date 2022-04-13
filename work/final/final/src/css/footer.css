@@ -9,3 +9,22 @@
 
     padding: 1rem;
 }
+
+a {
+    color: var(--highlight-color);
+    cursor: pointer;
+
+    text-decoration: underline transparent;
+}
+
+a:hover,
+a:focus-within {
+    color: var(--font-color);
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a {
+        transition: text-decoration 0.25s, color 0.25s;
+    }
+}
