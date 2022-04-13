@@ -1,0 +1,39 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background-color);
+}
+
+.header .icon-mask {
+    display: flex;
+    justify-content: center;
+
+    min-height: 7rem;
+    width: 10rem;
+}
+
+.header span {
+    text-align: center;
+
+    font-size: 5rem;
+    width: 100%;
+    /* filter: invert(58%) sepia(19%) saturate(634%) hue-rotate(358deg) brightness(100%) contrast(89%); */
+}
+
+.header .title {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    color: var(--highlight-color);
+
+    text-align: center;
+}
