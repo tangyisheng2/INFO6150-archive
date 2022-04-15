@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ShowObject from './utils/ShowObject';
+import '../css/navbar.css'
 
 function NavBar({ data, setShowingPage }) {
     const [expandedMenu, setExpandedMenu] = useState({});

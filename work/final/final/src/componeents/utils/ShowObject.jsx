@@ -5,11 +5,11 @@ function ShowObject({
     setExpandedMenu,
 }) {
     return (
-        <ul>
+        <ul className="navbar__list">
             {Object.keys(data).map((key) => {
                 if (typeof data[key] === 'string') {
                     return (
-                        <li key={key}>
+                        <li key={key} className='navbar__list-item'>
                             <a
                                 href="#"
                                 onClick={() => setShowingPage(data[key])}
@@ -23,7 +23,7 @@ function ShowObject({
                         // <ul>
                         //     <ShowObject entry={data[key]} setShowingPage={setShowingPage} />
                         // </ul>
-                        <li key={key}>
+                        <li key={key} className='navbar__list-item'>
                             <button
                                 onClick={() => {
                                     if (!(key in expandedMenu)) {
@@ -33,12 +33,14 @@ function ShowObject({
                                         ...expandedMenu,
                                         [key]: !expandedMenu[key],
                                     });
-                                }}
+                                }
+                                
+                            }
                             >
                                 {key}
                             </button>
                             {key in expandedMenu && expandedMenu[key] === true && (
-                                <ul>
+                                <ul className="navbar__sublist">
                                     <ShowObject
                                         entry={data[key]}
                                         setShowingPage={setShowingPage}
