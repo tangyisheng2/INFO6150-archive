@@ -36,7 +36,7 @@ function App() {
     return (
         <div className="app">
             <Header setShowingPage={setShowingPage} pageData={navPageData} className="header" />
-            <NavBar className="nav" />
+            <NavBar data={navPageData} setShowingPage={setShowingPage} className="nav" />
             {showingPage === 'home' && <Home />}
             {showingPage === 'form' && <Form pageData={navPageData}/>}
             {showingPage === 'NotFound' && <NotFound />}
