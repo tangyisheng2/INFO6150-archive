@@ -15,3 +15,7 @@
     font-size: rem;
     margin: 0.3rem 0;
 }
+
+.main img{
+    width: 100%;
+}
