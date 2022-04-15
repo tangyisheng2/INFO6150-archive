@@ -1,6 +1,5 @@
 import '../css/footer.css'
 function Footer({setShowingPage, pageData}){
-    console.log(pageData)
     return (
         <footer>
             {/* <li>© 1999-2022 Yisheng Tang.</li> */}
@@ -8,7 +7,7 @@ function Footer({setShowingPage, pageData}){
             <li>© 1999-2022 Yisheng Tang.</li>
             {Object.keys(pageData).map((entry) => {
                 return (
-                    <li><a href={`#/${pageData[entry]}`} onClick={() => {setShowingPage(pageData[entry])}}>{entry}</a></li>
+                    <li key={entry}><a href={`#/${pageData[entry]}`} onClick={() => {setShowingPage(pageData[entry])}}>{entry}</a></li>
                 )
             })}
             </ul>

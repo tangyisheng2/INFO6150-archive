@@ -8,7 +8,7 @@ function ShowObject(entry) {
             <ul>
                 {Object.keys(data).map((key) => {
                     return (
-                        <li>
+                        <li key={key}>
                             {key}: <ShowObject entry={data[key]} />
                         </li>
                     );
