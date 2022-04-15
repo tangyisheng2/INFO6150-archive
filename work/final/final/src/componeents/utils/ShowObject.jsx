@@ -1,20 +1,36 @@
-function ShowObject(entry) {
-    let data = entry.entry;
-
-    if (typeof data === 'string') {
-        return <span>{data}</span>;
-    } else {
-        return (
-            <ul>
-                {Object.keys(data).map((key) => {
+function ShowObject({ entry: data, setShowingPage }) {
+    return (
+        <ul>
+            {Object.keys(data).map((key) => {
+                if (typeof data[key] === 'string') {
                     return (
                         <li key={key}>
-                            {key}: <ShowObject entry={data[key]} />
+                            <a
+                                href="#"
+                                onClick={() => setShowingPage(data[key])}
+                            >
+                                {key}
+                            </a>
                         </li>
                     );
-                })}
-            </ul>
-        );
-    }
+                } else if (typeof data[key] === 'object') {
+                    return (
+                        // <ul>
+                        //     <ShowObject entry={data[key]} setShowingPage={setShowingPage} />
+                        // </ul>
+                        <li key={key}> 
+                            <button>{key}</button>
+                            <ul>
+                                <ShowObject
+                                    entry={data[key]}
+                                    setShowingPage={setShowingPage}
+                                />
+                            </ul>
+                        </li>
+                    );
+                }
+            })}
+        </ul>
+    );
 }
 export default ShowObject;
