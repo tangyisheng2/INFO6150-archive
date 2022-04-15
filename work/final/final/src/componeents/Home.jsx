@@ -1,7 +1,7 @@
 import '../css/home.css'
 function Home() {
     return (
-        <main class="main">
+        <main className="main">
             <p>👋Hi, welcome to my gallery.</p>
             <p>👨‍🎓I am Eason from Northeastern Univerisity</p>
             <p>⌨️I am mostly a programmer</p>
