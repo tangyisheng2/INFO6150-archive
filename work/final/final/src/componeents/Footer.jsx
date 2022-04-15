@@ -1,7 +1,7 @@
 import '../css/footer.css'
 function Footer({setShowingPage, pageData}){
     return (
-        <footer>
+        <footer className='footer'>
             {/* <li>© 1999-2022 Yisheng Tang.</li> */}
             <ul>
             <li>© 1999-2022 Yisheng Tang.</li>

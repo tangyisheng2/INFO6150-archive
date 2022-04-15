@@ -5,14 +5,14 @@ function NavBar({ data, setShowingPage }) {
     const [expandedMenu, setExpandedMenu] = useState({});
 
     return (
-        <div>
+        <nav className='navbar'>
             <ShowObject
                 entry={data}
                 setShowingPage={setShowingPage}
                 expandedMenu={expandedMenu}
                 setExpandedMenu={setExpandedMenu}
             />
-        </div>
+        </nav>
     );
 }
 export default NavBar;
