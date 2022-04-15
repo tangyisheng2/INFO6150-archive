@@ -42,3 +42,25 @@
 .header:focus-within {
     color: var(--font-color);
 }
+
+.title a,
+.title button {
+    color: var(--highlight-color);
+    cursor: pointer;
+
+    text-decoration: underline transparent;
+}
+
+.title a:hover,
+.title a:focus-within,
+.title button:hover,
+.title button:focus-within {
+    color: var(--font-color);
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .title a {
+        transition: text-decoration 0.25s, color 0.25s;
+    }
+}

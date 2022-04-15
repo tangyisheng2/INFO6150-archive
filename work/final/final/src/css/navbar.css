@@ -1,0 +1,49 @@
+.navbar {
+    border-top: 2px solid var(--highlight-color);
+    border-bottom: 2px solid var(--highlight-color);
+}
+
+.navbar__list {
+    list-style: none;
+}
+
+.navbar__list-item {
+    margin: 1rem;
+
+    font-size: 2rem;
+}
+
+.navbar__list-item button {
+    font-size: 2rem;
+
+    background-color: transparent;
+    border: 0;
+
+    color: var(--highlight-color);
+}
+
+
+
+.navbar__list-item a,
+.navbar__list-item button {
+    color: var(--highlight-color);
+    cursor: pointer;
+
+    text-decoration: underline transparent;
+}
+
+.navbar__list-item a:hover,
+.navbar__list-item a:focus-within,
+.navbar__list-item button:hover,
+.navbar__list-item button:focus-within {
+    color: var(--font-color);
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .navbar__list-item a,
+    .navbar__list-item button
+     {
+        transition: text-decoration 0.25s, color 0.25s;
+    }
+}
