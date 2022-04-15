@@ -7,15 +7,15 @@ function Header({ setShowingPage, pageData }) {
             }}
             className="header"
         >
-            <mask className="icon-mask">
+            <div className="icon-mask">
                 <span>📷</span>
-            </mask>
-            <heading className="title">
+            </div>
+            <div className="title">
                 <a href={`#/home`}>
                     <h1>Gallery of California</h1>
                     <h2>Always Exploring :D</h2>
                 </a>
-            </heading>
+            </div>
         </header>
     );
 }
