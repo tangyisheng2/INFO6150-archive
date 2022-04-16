@@ -47,3 +47,5 @@
     - If you use/link to css.gg css files, theose files should already include license information
     - If you copy css.gg css into your own css file, update README to say what you copied and link to css.gg license
 
+## Licence
+- Spinner is licenced under [the MIT Licence](https://css.gg/doc/licence).

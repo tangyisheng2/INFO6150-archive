@@ -1,3 +1,90 @@
-.app { 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
 
+body {
+    --background-color: #170606;
+    --hightlight-color: #ba9f65;
+    --unfocus-color: white;
+    --font-color: white;
+
+    background-color: var(--background-color);
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.posts {
+    color: var(--font-color);
+
+    padding: 1rem;
+    margin: 1rem;
+
+    list-style: none;
+}
+
+.post {
+    padding: 1rem;
+
+    border: 4px dotted transparent;
+}
+
+.post-title a {
+    color: var(--font-color);
+
+    text-decoration: none;
+
+    /* padding: 1rem; */
+}
+
+.post:hover,
+.post:focus-within,
+.post.active {
+    border: 4px dotted var(--hightlight-color);
+}
+
+.post.active .post-title a {
+    color: var(--hightlight-color);
+}
+
+.post-title:hover a,
+.post-title:focus-within a {
+    color: var(--hightlight-color);
+
+    cursor: pointer;
+}
+
+.post-body {
+    padding: 1rem 0;
+}
+
+.comment-prompt {
+    padding-top: 1rem;
+
+    border-top: 1px solid var(--hightlight-color);
+}
+
+.comment {
+    margin: 0.5rem;
+}
+
+.comment-author {
+    color: var(--hightlight-color);
+}
+
+.comment-email {
+    color: grey;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .post-title a {
+        transition: color 0.25s;
+    }
+
+    .post {
+        transition: border 0.25s;
+    }
+}
