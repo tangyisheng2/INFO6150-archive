@@ -29,7 +29,10 @@
     color: var(--highlight-color);
     cursor: pointer;
 
-    text-decoration: underline transparent;
+    /* text-decoration: underline transparent; */
+    text-decoration: none;
+
+    border-bottom: 2px solid transparent;
 }
 
 .navbar__list-item a:hover,
@@ -37,13 +40,19 @@
 .navbar__list-item button:hover,
 .navbar__list-item button:focus-within {
     color: var(--font-color);
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid var(--font-color);
 }
+
+/* .icon {
+    display: inline-block;
+    height: 100%;
+} */
 
 @media (prefers-reduced-motion: no-preference) {
     .navbar__list-item a,
     .navbar__list-item button
      {
-        transition: text-decoration 0.25s, color 0.25s;
+        transition: border 0.25s, color 0.25s;
     }
 }

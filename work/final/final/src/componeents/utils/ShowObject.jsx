@@ -1,3 +1,6 @@
+import '../../css/css.gg/gg-menu.css';
+import '../../css/css.gg/gg-close.css';
+
 function ShowObject({
     entry: data,
     setShowingPage,
@@ -9,7 +12,7 @@ function ShowObject({
             {Object.keys(data).map((key) => {
                 if (typeof data[key] === 'string') {
                     return (
-                        <li key={key} className='navbar__list-item'>
+                        <li key={key} className="navbar__list-item">
                             <a
                                 href="#"
                                 onClick={() => setShowingPage(data[key])}
@@ -23,7 +26,7 @@ function ShowObject({
                         // <ul>
                         //     <ShowObject entry={data[key]} setShowingPage={setShowingPage} />
                         // </ul>
-                        <li key={key} className='navbar__list-item'>
+                        <li key={key} className="navbar__list-item">
                             <button
                                 onClick={() => {
                                     if (!(key in expandedMenu)) {
@@ -33,12 +36,18 @@ function ShowObject({
                                         ...expandedMenu,
                                         [key]: !expandedMenu[key],
                                     });
-                                }
-                                
-                            }
+                                }}
                             >
-                                {key}
+                                {key}{' '}
+                                {expandedMenu[key] !== true && (
+                                    <i className="icon gg-menu-boxed" />
+                                )}
+                                {expandedMenu[key] === true && (
+                                    <i className="icon gg-close" />
+                                )}
                             </button>
+                            {/* {expandedMenu[key] === true && <span><i className='gg-menu' /></span>} */}
+
                             {key in expandedMenu && expandedMenu[key] === true && (
                                 <ul className="navbar__sublist">
                                     <ShowObject
