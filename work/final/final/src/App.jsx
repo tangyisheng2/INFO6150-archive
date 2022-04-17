@@ -11,6 +11,7 @@ import NavBar from './componeents/NavBar';
 import NotFound from './componeents/NotFound';
 import Privacy from './componeents/Privacy';
 import Licence from './componeents/License';
+import Comments from './componeents/Comments';
 
 function App() {
     const [showingPage, setShowingPage] = useState('home');
@@ -44,6 +45,7 @@ function App() {
             {showingPage === 'santacruz' && <SantaCruz />}
             {showingPage === 'privacy' && <Privacy />}
             {showingPage === 'licence' && <Licence />}
+            {showingPage === 'comments' && <Comments />}
             {/* {!(showingPage in [...Object.keys(navPageData), ...Object.keys(miscPageData)] || showingPage === undefined) && <NotFound setShowingPage={setShowingPage} pageData={navPageData} className='404'/>} */}
             <Footer setShowingPage={setShowingPage} pageData={miscPageData} className="footer" />
             {/* <Footer className="footer" /> */}
