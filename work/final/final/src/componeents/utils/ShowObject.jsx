@@ -59,6 +59,9 @@ function ShowObject({
                         </li>
                     );
                 }
+                // else {
+                //     return null
+                // }
             })}
         </ul>
     );
