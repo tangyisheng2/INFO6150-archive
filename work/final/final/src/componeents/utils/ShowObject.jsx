@@ -14,7 +14,7 @@ function ShowObject({
                     return (
                         <li key={key} className="navbar__list-item">
                             <a
-                                href="#"
+                                href={`/#/${key}`}
                                 onClick={() => setShowingPage(data[key])}
                             >
                                 {key}
@@ -58,10 +58,9 @@ function ShowObject({
                             )}
                         </li>
                     );
+                } else {
+                    return null;
                 }
-                // else {
-                //     return null
-                // }
             })}
         </ul>
     );
