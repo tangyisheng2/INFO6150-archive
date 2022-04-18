@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { fetchComments, fetchCommentsForPostId } from './utils/services';
 import '../css/css.gg/gg-spinner.css';
+import '../css/comments.css'
 
 function Comments({
     comments,
@@ -62,12 +63,12 @@ function Comments({
                         <button>Submit</button>
                     </form>
                     <div className="comments">
-                        <ul>
+                        <ul className='comments__list'>
                             {Object.keys(comments).map((key) =>
                                 comments[key].map((entry) => {
                                     return (
                                         <li key={entry.id} className="comment">
-                                            {entry.name}: {entry.body}
+                                            <span className='comment__name'>{entry.name}</span>: <span className="comment__body">{entry.body}</span>
                                         </li>
                                     );
                                 })
