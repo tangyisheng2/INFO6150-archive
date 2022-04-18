@@ -33,6 +33,12 @@ function App() {
       "Licence": 'licence'
     }
 
+    // Comments.jsx
+    const [comments, setComments] = useState({});
+    const [commentsErrorMessage, setCommentsErrorMessage] = useState("")
+
+
+
     return (
         <div className="app">
             <Header setShowingPage={setShowingPage} pageData={navPageData} className="header" />
@@ -45,7 +51,7 @@ function App() {
             {showingPage === 'santacruz' && <SantaCruz />}
             {showingPage === 'privacy' && <Privacy />}
             {showingPage === 'licence' && <Licence />}
-            {showingPage === 'comments' && <Comments />}
+            {showingPage === 'comments' && <Comments comments={comments} setComments={setComments} commentsErrorMessage = {commentsErrorMessage} setCommentsErrorMessage={setCommentsErrorMessage} />}
             {/* {!(showingPage in [...Object.keys(navPageData), ...Object.keys(miscPageData)] || showingPage === undefined) && <NotFound setShowingPage={setShowingPage} pageData={navPageData} className='404'/>} */}
             <Footer setShowingPage={setShowingPage} pageData={miscPageData} className="footer" />
             {/* <Footer className="footer" /> */}
