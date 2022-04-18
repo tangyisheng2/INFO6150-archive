@@ -52,6 +52,10 @@
 
 .comments__list {
     list-style: none;
+
+    border-top: 2px solid var(--highlight-color);
+
+    margin-top: 1rem;
 }
 
 .comment {
