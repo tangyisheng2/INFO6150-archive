@@ -2,8 +2,8 @@ export function fetchComments() {
     const postId = 1;
     const endPointUrl = `https://jsonplaceholder.typicode.com/posts/${postId}/comments`;
     return new Promise((resolve) => {
-        setTimeout(resolve, 200);
-    })
+        setTimeout(resolve, 2000);
+    }).catch(() => Promise.reject('networkError'))
         .then(() =>
             fetch(endPointUrl, {
                 method: 'GET',
