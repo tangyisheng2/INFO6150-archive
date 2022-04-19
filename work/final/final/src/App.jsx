@@ -39,7 +39,7 @@ function App() {
     const [commentsErrorMessage, setCommentsErrorMessage] = useState('');
 
     // Newsletter.jsx
-    const [currentUser, setCurrentUser] = useState('');
+    const [currentUser, setCurrentUser] = useState({});
 
     return (
         <div className="app">
@@ -53,9 +53,9 @@ function App() {
                 setShowingPage={setShowingPage}
                 className="nav"
             />
-            <CurrentUser name={currentUser} />
+            <CurrentUser user={currentUser} />
             {showingPage === 'home' && <Home />}
-            {showingPage === 'form' && <Form />}
+            {showingPage === 'form' && <Form setCurrentUser={setCurrentUser} />}
             {showingPage === 'NotFound' && <NotFound />}
             {showingPage === 'monterey' && <Monterey />}
             {showingPage === 'halfmoonbay' && <HalfMoonBay />}

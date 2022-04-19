@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../css/form.css';
-function Form() {
+function Form({setCurrentUser}) {
     const [formData, setFormData] = useState({});
     const [errorMsg, setErrorMsg] = useState("");
     const saveData = (key, val) => {
@@ -146,6 +146,7 @@ function Form() {
                     onClick={() => {
                         if (checkComplete(formData)) {
                             // todo Complete the send request logic
+                            setCurrentUser(formData)
                             console.log(formData);
                         }
                     }}
