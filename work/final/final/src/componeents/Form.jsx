@@ -12,7 +12,7 @@ function Form() {
     // This function checks the value while the user types
     // @return: bool
     const checkValid = (type, e) => {
-        console.log(e);
+        // console.log(e);
         if (type === 'text') {
             // Use != on purpose
             if (e.target.value != false) {
@@ -73,7 +73,7 @@ function Form() {
     };
     return (
         <div className="form">
-            <p className="form__errmsg-list">{errorMsg}</p>
+            <div className="form__errmsg-list">{errorMsg}</div>
             <form className="form__body" method="post" action="#">
                 <label>
                     Name:{' '}
@@ -139,7 +139,7 @@ function Form() {
                     <span>I agree the TOS.</span>
                 </label>
                 <button
-                    class="newsletter__submit"
+                    className="newsletter__submit"
                     type="button"
                     onClick={() => {
                         checkComplete(formData);
@@ -148,7 +148,7 @@ function Form() {
                 >
                     Submit
                 </button>
-                <p class="newsletter__status"></p>
+            <p className="newsletter__status"></p>
             </form>
         </div>
     );
