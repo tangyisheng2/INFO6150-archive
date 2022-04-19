@@ -67,7 +67,7 @@ function Form() {
         }
         setErrorMsg(
             inCompleteSectionName.map((entry) => {
-                return <p className="form__errmsg">{entry}</p>;
+                return <p key={entry} className="form__errmsg">{entry}</p>;
             })
         );
     };
