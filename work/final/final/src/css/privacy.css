@@ -1,0 +1,13 @@
+.main {
+    margin: 1rem;
+
+    word-break: break-all;
+}
+
+.main a {
+    color: var(--highlight-color);
+}
+
+.main p, .main li {
+    text-align: left;
+}
