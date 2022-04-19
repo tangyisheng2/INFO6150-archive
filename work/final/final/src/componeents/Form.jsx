@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../css/form.css';
 function Form() {
     const [formData, setFormData] = useState({});
-    const [errorMsg, setErrorMsg] = useState();
+    const [errorMsg, setErrorMsg] = useState("");
     const saveData = (key, val) => {
         setFormData({ ...formData, [key]: val });
         console.log(`${key}, ${val}`);
@@ -14,8 +14,7 @@ function Form() {
     const checkValid = (type, e) => {
         // console.log(e);
         if (type === 'text') {
-            // Use != on purpose
-            if (e.target.value != false) {
+            if (e.target.value.length > 0) {
                 e.target.classList.remove('error');
                 return true;
             }
@@ -33,8 +32,7 @@ function Form() {
                 return true;
             }
         } else if (type === 'select') {
-            // Use != on purpose
-            if (e.target.value != false) {
+            if (e.target.value.length > 0) {
                 e.target.classList.remove('error');
                 return true;
             }
@@ -48,7 +46,6 @@ function Form() {
     // @return: bool
     const checkComplete = (data) => {
         const inCompleteSectionName = [];
-        console.log(data);
         if (!('name' in data)) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the name';
@@ -67,16 +64,21 @@ function Form() {
         }
         setErrorMsg(
             inCompleteSectionName.map((entry) => {
-                return <p key={entry} className="form__errmsg">{entry}</p>;
+                return (
+                    <p key={entry} className="form__errmsg">
+                        {entry}
+                    </p>
+                );
             })
         );
+        return inCompleteSectionName.length === 0;
     };
     return (
         <div className="form">
             <div className="form__errmsg-list">{errorMsg}</div>
             <form className="form__body" method="post" action="#">
                 <label>
-                    Name:{' '}
+                    Name:<span className='required__mark'>*</span>
                     <input
                         type="text"
                         id="name"
@@ -91,7 +93,7 @@ function Form() {
                     />
                 </label>
                 <label>
-                    Email:{' '}
+                    Email:<span className='required__mark'>*</span>
                     <input
                         type="email"
                         id="email"
@@ -106,7 +108,7 @@ function Form() {
                     />
                 </label>
                 <label>
-                    Tier:{' '}
+                    Tier:<span className='required__mark'>*</span>
                     <select
                         name="tier"
                         id="tier"
@@ -136,19 +138,21 @@ function Form() {
                             }
                         }}
                     />
-                    <span>I agree the TOS.</span>
+                    <span>I agree the TOS.</span><span className='required__mark'>*</span>
                 </label>
                 <button
                     className="newsletter__submit"
                     type="button"
                     onClick={() => {
-                        checkComplete(formData);
-                        console.log(formData);
+                        if (checkComplete(formData)) {
+                            // todo Complete the send request logic
+                            console.log(formData);
+                        }
                     }}
                 >
                     Submit
                 </button>
-            <p className="newsletter__status"></p>
+                <p className="newsletter__status"></p>
             </form>
         </div>
     );
