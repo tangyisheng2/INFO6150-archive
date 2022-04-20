@@ -1,8 +1,9 @@
 export function fetchComments() {
-    const postId = 1;
-    const endPointUrl = `https://jsonplaceholder.typicode.com/posts/${postId}/comments`;
+    // const postId = 1;
+    // const endPointUrl = `https://jsonplaceholder.typicode.com/posts/${postId}/comments`;
+    const endPointUrl = `http://localhost:3001/comment`;
     return new Promise((resolve) => {
-        setTimeout(resolve, 2000);
+        setTimeout(resolve, 500);
     })
         .catch(() => Promise.reject('networkError'))
         .then(() =>
@@ -23,11 +24,15 @@ export function fetchComments() {
 }
 
 export function postComments(commentObj) {
-    const endPointUrl = `https://httpbin.org/post`;
+    // const endPointUrl = `https://httpbin.org/post`;
+    const endPointUrl = `http://localhost:3001/comment`;
     const postBody = JSON.stringify(commentObj);
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json")
     return fetch(endPointUrl, {
         method: 'POST',
         body: postBody,
+        headers: myHeaders
     })
         .catch(() => Promise.reject('networkError'))
         .then((response) => {

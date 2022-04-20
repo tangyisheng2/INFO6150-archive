@@ -74,6 +74,10 @@
     border: 2px solid red !important;
 }
 
+.comments {
+    width: 100%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .form__body button {
         transition: color 0.25s;
