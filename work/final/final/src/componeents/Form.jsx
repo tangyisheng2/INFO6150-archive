@@ -21,7 +21,7 @@ function Form({setCurrentUser}) {
         } else if (type === 'email') {
             if (
                 // Regex from stackoverflow: https://stackoverflow.com/questions/41348459/regex-in-react-email-validation
-                /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(e.target.value)
+                /^[a-zA-Z0-9.-_+]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(e.target.value)
             ) {
                 e.target.classList.remove('error');
                 return true;
@@ -146,7 +146,8 @@ function Form({setCurrentUser}) {
                     onClick={() => {
                         if (checkComplete(formData)) {
                             // todo Complete the send request logic
-                            setCurrentUser(formData)
+                            setCurrentUser(formData
+                                )
                             console.log(formData);
                         }
                     }}
