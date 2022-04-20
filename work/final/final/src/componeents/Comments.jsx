@@ -22,19 +22,23 @@ function Comments({
             ...commentForum,
             [field]: value,
         });
-        console.log(commentForum);
+    }
+
+    function checkComplete(e) {
+        if (!e.target.value.length) {
+            e.target.classList.add('error');
+            return false;
+        }
+        e.target.classList.remove('error');
+        return true;
     }
 
     useEffect(() => {
         fetchComments()
             .then((fetchedComments) => {
-                // console.log('fetched comments');
-                // console.log(fetchedComments);
                 setComments({
                     default: fetchedComments,
                 });
-                // console.dir("fetchedComments: " + fetchedComments);
-                // console.dir("comments:" + comments);
             })
             .catch((error) => {
                 // Error handling using error state, shown in div.status
@@ -71,23 +75,27 @@ function Comments({
                                 type="text"
                                 id="comment"
                                 name="comment"
-                                onChange={(e) =>
-                                    updateCommentForum(
-                                        'body',
-                                        e.target.value
-                                    )
-                                }
+                                onChange={(e) => {
+                                    if (checkComplete(e)) {
+                                        updateCommentForum(
+                                            'body',
+                                            e.target.value
+                                        );
+                                    }
+                                }}
                                 className="comment-forms__comment"
                             />
                         </label>
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
-                                // console.log(commentForum);
-                                // const ret = ;
-                                const ret = postComments(commentForum);
-                                setComments(ret)
-                                console.log(ret)
+                                if (commentForum['body'].length) {
+                                    if (!commentForum['name']) {
+                                        commentForum['name'] = 'anonymous';
+                                    }
+                                    const ret = postComments(commentForum);
+                                    setComments(ret);
+                                }
                             }}
                         >
                             Submit

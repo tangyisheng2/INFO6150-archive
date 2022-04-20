@@ -69,3 +69,7 @@
     
     color: var(--highlight-color);
 }
+
+.main .error {
+    border: 2px solid red;
+}
