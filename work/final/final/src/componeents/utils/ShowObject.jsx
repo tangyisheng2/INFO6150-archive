@@ -30,12 +30,13 @@ function ShowObject({
                             <button
                                 onClick={() => {
                                     if (!(key in expandedMenu)) {
-                                        expandedMenu[key] = true;
+                                        expandedMenu[key] = false;
                                     }
                                     setExpandedMenu({
                                         ...expandedMenu,
                                         [key]: !expandedMenu[key],
                                     });
+                                    console.log(expandedMenu)
                                 }}
                             >
                                 {key}{' '}
