@@ -70,7 +70,7 @@
     cursor: pointer;
 }
 
-.error {
+.form .error {
     border: 2px solid red !important;
 }
 
