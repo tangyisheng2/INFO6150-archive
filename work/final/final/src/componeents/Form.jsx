@@ -21,7 +21,7 @@ function Form({setCurrentUser}) {
         } else if (type === 'email') {
             if (
                 // Regex from stackoverflow: https://stackoverflow.com/questions/41348459/regex-in-react-email-validation
-                /^[a-zA-Z0-9.-_+]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(e.target.value)
+                /^[a-zA-Z0-9.-_]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(e.target.value)
             ) {
                 e.target.classList.remove('error');
                 return true;
@@ -46,11 +46,11 @@ function Form({setCurrentUser}) {
     // @return: bool
     const checkComplete = (data) => {
         const inCompleteSectionName = [];
-        if (!('name' in data)) {
+        if (!('name' in data) && data['name'].length) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the name';
         }
-        if (!('email' in data)) {
+        if (!('email' in data) && data['email'].length) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the email';
         }
@@ -74,7 +74,7 @@ function Form({setCurrentUser}) {
         return inCompleteSectionName.length === 0;
     };
     return (
-        <div className="form">
+        <main className="form">
             <div className="form__errmsg-list">{errorMsg}</div>
             <form className="form__body" method="post" action="#">
                 <label>
@@ -156,7 +156,7 @@ function Form({setCurrentUser}) {
                 </button>
                 <p className="newsletter__status"></p>
             </form>
-        </div>
+        </main>
     );
 }
 export default Form;

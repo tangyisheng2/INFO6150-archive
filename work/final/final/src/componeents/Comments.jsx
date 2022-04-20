@@ -51,7 +51,7 @@ function Comments({
     }, [isLoading]);
 
     return (
-        <div className="main">
+        <main className="main">
             <div className="error-msg">{errorMsg}</div>
             {isLoading && <div className="gg-spinner"></div>}
             {!isLoading && (
@@ -122,7 +122,7 @@ function Comments({
                     </div>
                 </>
             )}
-        </div>
+        </main>
     );
 }
 
