@@ -22,8 +22,6 @@
     color: var(--highlight-color);
 }
 
-
-
 .navbar__list-item a,
 .navbar__list-item button {
     color: var(--highlight-color);
@@ -50,9 +48,26 @@
 } */
 
 @media (prefers-reduced-motion: no-preference) {
+    .navbar__sublist {
+        animation: 0.5s cubic-bezier(0.55, 0.06, 0.68, 0.19) 0s 1 drop-down;
+    }
+    @keyframes drop-down {
+        from {
+            opacity: 0;
+
+            height: 0;
+        }
+        50% {
+            height: 9rem;
+            opacity: 0;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+
     .navbar__list-item a,
-    .navbar__list-item button
-     {
+    .navbar__list-item button {
         transition: border 0.25s, color 0.25s;
     }
 }
