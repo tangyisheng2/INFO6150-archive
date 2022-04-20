@@ -33,7 +33,8 @@
 
     padding: 1rem;
 
-    color: var(--highlight-color);
+    /* color: var(--highlight-color); */
+    color: var(--font-color);
 
     text-align: center;
 }
@@ -45,7 +46,8 @@
 
 .title a,
 .title button {
-    color: var(--highlight-color);
+    /* color: var(--highlight-color); */
+    color: var(--font-color);
     cursor: pointer;
 
     text-decoration: underline transparent;
@@ -55,7 +57,7 @@
 .title a:focus-within,
 .title button:hover,
 .title button:focus-within {
-    color: var(--font-color);
+    color: var(--highlight-color);
     text-decoration: underline;
 }
 

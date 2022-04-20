@@ -21,7 +21,7 @@
 
     background-color: transparent;
 
-    border: 2px solid var(--highlight-color);
+    border: 2px solid var(--font-color);
     border-radius: 1rem;
 
     color: var(--font-color);

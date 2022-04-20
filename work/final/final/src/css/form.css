@@ -29,7 +29,7 @@
     margin-top: 0.25rem;
     padding: 0.5rem;
 
-    border: 2px solid var(--highlight-color);
+    border: 2px solid var(--font-color);
     border-radius: 1rem;
 
     text-align: center;
@@ -63,6 +63,7 @@
     font-weight: bold;
     color: var(--font-color);
 }
+
 
 .form__body button:hover,
 .form__body button:focus-within {

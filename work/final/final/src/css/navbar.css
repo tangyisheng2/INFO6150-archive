@@ -19,12 +19,14 @@
     background-color: transparent;
     border: 0;
 
-    color: var(--highlight-color);
+    /* color: var(--highlight-color); */
+    /* color: var(--font-color); */
 }
 
 .navbar__list-item a,
 .navbar__list-item button {
-    color: var(--highlight-color);
+    /* color: var(--highlight-color); */
+    color: var(--font-color);
     cursor: pointer;
 
     /* text-decoration: underline transparent; */
@@ -37,9 +39,9 @@
 .navbar__list-item a:focus-within,
 .navbar__list-item button:hover,
 .navbar__list-item button:focus-within {
-    color: var(--font-color);
+    color: var(--highlight-color);
     /* text-decoration: underline; */
-    border-bottom: 2px solid var(--font-color);
+    border-bottom: 2px solid var(--highlight-color);
 }
 
 /* .icon {

@@ -5,9 +5,23 @@
 }
 
 .main a {
+    color: var(--font-color);
+}
+
+.main a:hover,
+.main a:focus-within {
     color: var(--highlight-color);
 }
 
+
+
 .main p, .main li {
     text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .main a {
+
+        transition: text-decoration 0.25s, color 0.25s;
+    }
 }
