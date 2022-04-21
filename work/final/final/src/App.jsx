@@ -13,11 +13,13 @@ import Privacy from './componeents/Privacy';
 import Licence from './componeents/License';
 import Comments from './componeents/Comments';
 import CurrentUser from './componeents/CurrentUser';
+// Home Image
+import halfMoonBayPreview from './img/half_moon_bay/NorCal2018_Beach_and_Cliff_at_Ritz-Carlton_Half_Moon_Bay_S0675078.jpeg';
+import montereyPreview from './img/monterey/MontereyBayAquariumBackview_(cropped).jpeg';
+import santacruzPreview from './img/santa_cruz/Downtown_santa_cruz,_cropped_(cropped).jpeg';
 
 function App() {
     const [showingPage, setShowingPage] = useState('home');
-    console.log(showingPage);
-
     const navPageData = {
         Home: 'home',
         Locations: {
@@ -32,6 +34,19 @@ function App() {
     const miscPageData = {
         'Privacy Policy': 'privacy',
         Licence: 'licence',
+    };
+
+    const locationDescription = {
+        Monterey: 'Language Capital of the World,California\'s "First" City',
+        'Half Moon Bay':
+            'Home of the world famous Half Moon Bay Pumpkin Festival!',
+        'Santa Cruz': 'Surf City',
+    };
+
+    const locationPreviewImage = {
+        Monterey: montereyPreview,
+        'Half Moon Bay': halfMoonBayPreview,
+        'Santa Cruz': santacruzPreview,
     };
 
     // Comments.jsx
@@ -54,7 +69,14 @@ function App() {
                 className="nav"
             />
             <CurrentUser user={currentUser} />
-            {showingPage === 'home' && <Home />}
+            {showingPage === 'home' && (
+                <Home
+                    navPageData={navPageData.Locations}
+                    cityDescription={locationDescription}
+                    cityImage={locationPreviewImage}
+                    setShowingPage={setShowingPage}
+                />
+            )}
             {showingPage === 'form' && <Form setCurrentUser={setCurrentUser} />}
             {showingPage === 'NotFound' && <NotFound />}
             {showingPage === 'monterey' && <Monterey />}

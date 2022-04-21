@@ -10,3 +10,11 @@
     justify-content: center;
     align-items: center;
 }
+
+.licence__list {
+    list-style: decimal;
+
+    word-break: break-all;
+
+    margin: 1rem;
+}
