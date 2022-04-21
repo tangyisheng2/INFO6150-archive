@@ -4,7 +4,7 @@ import OceanView from '../../img/santa_cruz/IMG_7160.jpeg';
 import Sunset from '../../img/santa_cruz/IMG_6136.jpeg';
 function SantaCruz() {
     return (
-        <main className="main">
+        <main className="santacruz__main">
             <h1 class="h1__title">Introduction</h1>
             <p>
                 Santa Cruz (Spanish for 'Holy Cross') is the county seat and

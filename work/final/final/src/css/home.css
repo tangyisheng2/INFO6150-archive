@@ -1,4 +1,9 @@
-.home__main {
+
+
+.home__main,
+.monterey__main,
+.halfmoonbay__main,
+.santacruz__main {
     color: var(--font-color);
 
     margin: 3rem 1rem;
@@ -11,12 +16,18 @@
     align-items: center;
 }
 
-.home__main p {
+.home__main p,
+.monterey__main p,
+.halfmoonbay__main p,
+.santacruz__main p {
     font-size: rem;
     margin: 0.3rem 0;
 }
 
-.home__main img {
+.home__main img,
+.monterey__main img,
+.halfmoonbay__main img,
+.santacruz__main img  {
     width: 100%;
 }
 

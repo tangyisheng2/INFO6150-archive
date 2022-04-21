@@ -3,7 +3,7 @@ import OceanView2 from '../../img/half_moon_bay/IMG_9120.jpeg';
 import Beach from '../../img/half_moon_bay/IMG_9127.jpeg';
 function HalfMoonBay() {
     return (
-        <main class="main">
+        <main class="halfmoonbay__main">
             <h1 class="h1__title">Introduction</h1>
             <p>
                 Half Moon Bay is a coastal city in San Mateo County, California,
