@@ -1,4 +1,4 @@
-.main {
+.home__main {
     color: var(--font-color);
 
     margin: 3rem 1rem;
@@ -11,11 +11,119 @@
     align-items: center;
 }
 
-.main p {
+.home__main p {
     font-size: rem;
     margin: 0.3rem 0;
 }
 
-.main img{
+.home__main img {
     width: 100%;
+}
+
+.home__main a {
+    color: var(--font-color);
+}
+
+.home__main a:hover,
+.home__main a:focus-within {
+    color: var(--highlight-color);
+}
+
+.home__accordion {
+    border-top: 2px solid var(--highlight-color);
+
+    padding: 1rem 0;
+}
+
+.home-accordion__list {
+    list-style: none;
+}
+
+.home-accordion__item {
+    border: 2px solid var(--highlight-color);
+}
+
+.home-accordion-item__body {
+    border-top: 1px solid var(--highlight-color);
+}
+
+.home-display__list {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+.home-display__list {
+    list-style: none;
+}
+
+.home-display-block__div {
+    height: 30rem;
+}
+
+.home-display-block__div {
+    background-size: cover;
+    resize: horizontal;
+    background-position: center;
+
+    text-align: center;
+}
+
+.home-display-block__description {
+    width: 100%;
+    text-align: center;
+}
+
+.preview__image {
+    height: 20rem;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.home__accordion {
+    text-align: left;
+
+    width: 100%;
+}
+
+.home__accordion h1 {
+    text-align: center;
+}
+
+.home-accordion__title {
+    background-color: transparent;
+
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+
+    justify-self: left;
+    text-align: left;
+    color: var(--font-color);
+
+    font-size: larger;
+
+    cursor: pointer;
+}
+
+.home-accordion-item__body.hide {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.home-accordion-item__body {
+    max-height: 20rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home__main a {
+        transition: text-decoration 0.25s, color 0.25s;
+    }
+
+    .home-accordion-item__body {
+        transition: max-height 0.5s;
+    }
 }

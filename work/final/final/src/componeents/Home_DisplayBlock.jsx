@@ -1,4 +1,3 @@
-import '../css/home-display-block.css'
 function Home_DisplayBlock ({displayTitle,title, description, image, link, setShowingPage}) {
     console.log(image)
     return (
