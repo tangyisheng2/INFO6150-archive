@@ -2,7 +2,7 @@ import '../css/home.css';
 import '../css/privacy.css'
 function Privacy() {
     return (
-        <main className="main">
+        <main className="privacy__main">
             <h1>Privacy Policy</h1>
             <p>Last updated: April 19, 2022</p>
             <p>
