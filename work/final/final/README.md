@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# SV INFO 6150 Final Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Yisheng Tang, NUID #002193735
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+This project displays some of my photos while travelling as well as a breif introduction to the scene at California, including Monterey, Half Moon Bay, and Santa Cruz
 
-### `npm start`
+## Technology Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Complex UI:
+  - Expanding sub-navigation-menu on the `NavBar` named Locations
+  - Accordion on Home page – `FAQ` section
+- Loading Indicator: User can see a loading indicator on `Comment Board` section on the first load
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Image Licencing
+1. Photos are licensed under the CC BY-NC-SA 4.0 License.Copyright 1999-2022 Yisheng Tang.
 
-### `npm test`
+2. preview_monterey is released to the public domain.Meij.kobayashi, Public domain, via Wikimedia Commons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Downtown_santa_cruz,_cropped_(cropped) is licenced under CC BY-SA 3.0.Aaronbrick, CC BY-SA 3.0, via Wikimedia Commons Referrence
 
-### `npm run build`
+4. The_Ritz-Carlton_-_Half_Moon_Bay,_CA_(San_Matteo_Coast)_-_panoramio_(1) is licenced under CC BY 3.0.MARELBU, CC BY 3.0, via Wikimedia Commons
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Spinner are licensed under The MIT License (MIT). Copyright © 2019-2020 css.gg
