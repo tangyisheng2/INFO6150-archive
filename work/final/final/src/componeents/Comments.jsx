@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import {
     fetchComments,
-    fetchCommentsForPostId,
     postComments,
 } from './utils/services';
 import '../css/css.gg/gg-spinner.css';
