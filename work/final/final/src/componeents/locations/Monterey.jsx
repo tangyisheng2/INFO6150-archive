@@ -5,7 +5,7 @@ import SunSet from '../../img/monterey/IMG_7426.jpeg';
 
 function Monterey() {
     return (
-        <main class="monterey__main">
+        <main id='main' class="monterey__main">
             <h1 class="h1__title">Introduction</h1>
             <p>
                 Monterey (Spanish: Monterrey; Ohlone: Aacistak[11]) is a city

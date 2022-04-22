@@ -51,7 +51,7 @@ function Comments({
     }, [isLoading]);
 
     return (
-        <main className="main">
+        <main id='main' className="main">
             <div className="error-msg">{errorMsg}</div>
             {isLoading && <div className="gg-spinner"></div>}
             {!isLoading && (

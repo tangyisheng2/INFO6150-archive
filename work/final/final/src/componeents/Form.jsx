@@ -74,7 +74,7 @@ function Form({setCurrentUser}) {
         return inCompleteSectionName.length === 0;
     };
     return (
-        <main className="form">
+        <main id='main' className="form">
             <div className="form__errmsg-list">{errorMsg}</div>
             <form className="form__body" method="post" action="#">
                 <label>

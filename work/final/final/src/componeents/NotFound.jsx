@@ -1,7 +1,7 @@
 import '../css/error.css'
 function NotFound({ setShowingPage, pageData }) {
     return (
-        <main class="main">
+        <main id='main' class="main">
             <div class="error__view">
                 <p class="error__code">404</p>
                 <p class="error__message">
