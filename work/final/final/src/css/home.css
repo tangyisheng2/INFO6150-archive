@@ -122,11 +122,12 @@
 .home-accordion-item__body.hide {
     max-height: 0;
     opacity: 0;
-    overflow: hidden;
+    /* overflow: auto; */
 }
 
 .home-accordion-item__body {
     max-height: 20rem;
+    overflow: hidden;
 }
 
 @media (prefers-reduced-motion: no-preference) {
