@@ -50,12 +50,11 @@ function ShowObject({
                             {/* {expandedMenu[key] === true && <span><i className='gg-menu' /></span>} */}
 
                             {key in expandedMenu && expandedMenu[key] === true && (
-                                <ul className="navbar__sublist">
                                     <ShowObject
                                         entry={data[key]}
                                         setShowingPage={setShowingPage}
+                                        className="navbar__sublist"
                                     />
-                                </ul>
                             )}
                         </li>
                     );
