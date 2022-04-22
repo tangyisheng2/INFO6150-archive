@@ -1,13 +1,13 @@
 import '../css/home.css';
 import Accordion from './Accordion';
-import Home_DisplayBlock from './Home_DisplayBlock';
+import HomeDisplayBlock from './HomeDisplayBlock';
 function Home({ navPageData, cityDescription, cityImage, setShowingPage }) {
     return (
         <main id="main" className="home__main">
             <ul className="home-display__list">
                 {Object.keys(navPageData).map((title) => {
                     return (
-                        <Home_DisplayBlock
+                        <HomeDisplayBlock
                             displayTitle={title}
                             title={navPageData[title]}
                             key={navPageData[title]}

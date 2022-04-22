@@ -1,4 +1,4 @@
-function Home_DisplayBlock({
+function HomeDisplayBlock({
     displayTitle,
     title,
     description,
@@ -22,4 +22,4 @@ function Home_DisplayBlock({
         </li>
     );
 }
-export default Home_DisplayBlock;
+export default HomeDisplayBlock;
