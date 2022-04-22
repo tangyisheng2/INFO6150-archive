@@ -15,7 +15,7 @@ function Accordion({ data }) {
                                 about: !expandedAccordion['about'],
                             })
                         }
-                        className="home-accordion__title"
+                        className={`home-accordion__title ${!expandedAccordion['about'] ? 'collapse' : 'expand'}`}
                     >
                         About me
                     </button>
@@ -45,7 +45,7 @@ function Accordion({ data }) {
                     }
                     className="home-accordion__item"
                 >
-                    <button className="home-accordion__title">Contacts</button>
+                    <button className={`home-accordion__title ${!expandedAccordion['contact'] ? 'collapse' : 'expand'}`}>Contacts</button>
                     <div
                         className={`home-accordion-item__body ${
                             !expandedAccordion['contact'] ? 'hide' : ''
@@ -62,7 +62,7 @@ function Accordion({ data }) {
                                 share: !expandedAccordion['share'],
                             })
                         }
-                        className="home-accordion__title"
+                        className={`home-accordion__title ${!expandedAccordion['share'] ? 'collapse' : 'expand'}`}
                     >
                         Share
                     </button>

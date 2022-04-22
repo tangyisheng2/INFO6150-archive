@@ -86,9 +86,30 @@
     text-align: center;
 }
 
+.home-display-block__title {
+    text-transform: uppercase;
+}
+
 .home-display-block__description {
     width: 100%;
     text-align: center;
+}
+
+.home-display-block__link {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.home-accordion__title.expand::after {
+    margin-left: auto;
+    text-align: right;
+    content: " –";
+    color: var(--font-color);
+}
+
+.home-accordion__title.collapse::after {
+    content: " +";
+    color: var(--font-color);
 }
 
 .preview__image {
