@@ -15,7 +15,6 @@ export function fetchComments() {
         .then((response) => {
             if (response.ok) {
                 const result = response.json();
-                console.log(result);
                 return result;
                 // return response.json();
             }
