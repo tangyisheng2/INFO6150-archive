@@ -6,9 +6,11 @@ function ShowObject({
     setShowingPage,
     expandedMenu,
     setExpandedMenu,
+    isSubmenu
 }) {
+    
     return (
-        <ul className="navbar__list">
+        <ul className={isSubmenu ? "navbar__sublist": "navbar__list"}>
             {Object.keys(data).map((key) => {
                 if (typeof data[key] === 'string') {
                     return (
@@ -54,6 +56,7 @@ function ShowObject({
                                         entry={data[key]}
                                         setShowingPage={setShowingPage}
                                         className="navbar__sublist"
+                                        isSubmenu={true}
                                     />
                             )}
                         </li>
