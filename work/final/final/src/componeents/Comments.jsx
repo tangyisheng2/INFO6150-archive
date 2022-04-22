@@ -47,7 +47,7 @@ function Comments({
                     setErrorMsg('Oops, service is down, come back later');
                 }
             });
-    }, [setComments, setErrorMsg]);
+    }, [setComments, setErrorMsg, isLoading]);
 
     return (
         <main id="main" className="main">
