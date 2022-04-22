@@ -15,7 +15,7 @@ function ShowObject({
                     return (
                         <li key={key} className="navbar__list-item">
                             <a
-                                href={`/#/${key}`}
+                                href={`#`}
                                 onClick={() => setShowingPage(data[key])}
                             >
                                 {key}

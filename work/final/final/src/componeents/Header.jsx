@@ -9,7 +9,7 @@ function Header({ setShowingPage, pageData }) {
                 <span>📷</span>
             </div>
             <div className="title">
-                <a href={`#/home`}>
+                <a href={`#`}>
                     <h1>Gallery of California</h1>
                     <h2>Always Exploring :D</h2>
                 </a>

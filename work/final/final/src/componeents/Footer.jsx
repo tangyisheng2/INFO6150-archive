@@ -7,8 +7,10 @@ function Footer({ setShowingPage, pageData }) {
                 {Object.keys(pageData).map((entry) => {
                     return (
                         <li key={entry}>
+                            
                             <a
-                                href={`#/${pageData[entry]}`}
+                                
+                                href={`#`}
                                 onClick={() => {
                                     setShowingPage(pageData[entry]);
                                 }}

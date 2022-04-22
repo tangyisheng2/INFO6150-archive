@@ -7,7 +7,7 @@ function NotFound({ setShowingPage, pageData }) {
                 <p class="error__message">Sorry, the page is lost!</p>
                 <p class="error__to_home">
                     <a
-                        href="/home"
+                        href="/"
                         onClick={() => setShowingPage(pageData.Home)}
                     >
                         Back to Home

@@ -13,7 +13,7 @@ function HomeDisplayBlock({
                 <p className="home-display-block__description">{description}</p>
                 <a
                     onClick={() => setShowingPage(title)}
-                    href={`#/location/${title}`}
+                    href={`#`}
                     className='home-display-block__link'
                 >
                     Learn More
