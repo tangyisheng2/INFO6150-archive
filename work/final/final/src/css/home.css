@@ -18,8 +18,13 @@
 .monterey__main p,
 .halfmoonbay__main p,
 .santacruz__main p {
-    font-size: rem;
     margin: 0.3rem 0;
+}
+
+.monterey__main p,
+.halfmoonbay__main p,
+.santacruz__main p {
+    text-align: left;
 }
 
 .home__main img,
