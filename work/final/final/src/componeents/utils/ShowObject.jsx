@@ -38,7 +38,6 @@ function ShowObject({
                                         ...expandedMenu,
                                         [key]: !expandedMenu[key],
                                     });
-                                    console.log(expandedMenu)
                                 }}
                             >
                                 {key}{' '}

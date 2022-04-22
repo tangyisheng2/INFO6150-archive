@@ -2,7 +2,6 @@ import '../css/home.css';
 import Accordion from './Accordion';
 import Home_DisplayBlock from './Home_DisplayBlock';
 function Home({ navPageData, cityDescription, cityImage, setShowingPage }) {
-    console.log(navPageData);
     return (
         <main id='main' className="home__main">
             <ul className="home-display__list">

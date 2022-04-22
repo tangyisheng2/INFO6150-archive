@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 function Accordion({ data }) {
     const [expandedAccordion, setExpandedAccordion] = useState({});
-    console.log(expandedAccordion);
 
     return (
         <div className="home__accordion">

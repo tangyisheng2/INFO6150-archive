@@ -5,14 +5,11 @@ function Form({setCurrentUser}) {
     const [errorMsg, setErrorMsg] = useState("");
     const saveData = (key, val) => {
         setFormData({ ...formData, [key]: val });
-        console.log(`${key}, ${val}`);
-        console.log(formData);
     };
 
     // This function checks the value while the user types
     // @return: bool
     const checkValid = (type, e) => {
-        // console.log(e);
         if (type === 'text') {
             if (e.target.value.length > 0) {
                 e.target.classList.remove('error');
@@ -148,7 +145,6 @@ function Form({setCurrentUser}) {
                             // todo Complete the send request logic
                             setCurrentUser(formData
                                 )
-                            console.log(formData);
                         }
                     }}
                 >

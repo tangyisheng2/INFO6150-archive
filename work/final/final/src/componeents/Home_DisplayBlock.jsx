@@ -1,5 +1,4 @@
 function Home_DisplayBlock ({displayTitle,title, description, image, link, setShowingPage}) {
-    console.log(image)
     return (
         <li className='home-display__block'>
             <div className={`home-display-block__div ${title}`} >
