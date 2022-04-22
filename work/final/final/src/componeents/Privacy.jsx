@@ -1,8 +1,8 @@
 import '../css/home.css';
-import '../css/privacy.css'
+import '../css/privacy.css';
 function Privacy() {
     return (
-        <main id='main' className="privacy__main">
+        <main id="main" className="privacy__main">
             <h1>Privacy Policy</h1>
             <p>Last updated: April 19, 2022</p>
             <p>
@@ -105,10 +105,7 @@ function Privacy() {
                     <p>
                         <strong>Website</strong> refers to California Gallery,
                         accessible from{' '}
-                        <a
-                            href="#/"
-                            rel="external nofollow"
-                        >
+                        <a href="#/" rel="external nofollow">
                             http://mysite.com
                         </a>
                     </p>
@@ -213,9 +210,7 @@ function Privacy() {
                 mobile device when You go offline, while Session Cookies are
                 deleted as soon as You close Your web browser. Learn more about
                 cookies:{' '}
-                <a
-                    href="https://www.privacypolicies.com/blog/privacy-policy-template/#Use_Of_Cookies_Log_Files_And_Tracking"
-                >
+                <a href="https://www.privacypolicies.com/blog/privacy-policy-template/#Use_Of_Cookies_Log_Files_And_Tracking">
                     Cookies by PrivacyPolicies Generator
                 </a>
                 .

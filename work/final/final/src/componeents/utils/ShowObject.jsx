@@ -6,11 +6,10 @@ function ShowObject({
     setShowingPage,
     expandedMenu,
     setExpandedMenu,
-    isSubmenu
+    isSubmenu,
 }) {
-    
     return (
-        <ul className={isSubmenu ? "navbar__sublist": "navbar__list"}>
+        <ul className={isSubmenu ? 'navbar__sublist' : 'navbar__list'}>
             {Object.keys(data).map((key) => {
                 if (typeof data[key] === 'string') {
                     return (
@@ -25,9 +24,6 @@ function ShowObject({
                     );
                 } else if (typeof data[key] === 'object') {
                     return (
-                        // <ul>
-                        //     <ShowObject entry={data[key]} setShowingPage={setShowingPage} />
-                        // </ul>
                         <li key={key} className="navbar__list-item">
                             <button
                                 onClick={() => {
@@ -48,16 +44,15 @@ function ShowObject({
                                     <i className="icon gg-close" />
                                 )}
                             </button>
-                            {/* {expandedMenu[key] === true && <span><i className='gg-menu' /></span>} */}
-
-                            {key in expandedMenu && expandedMenu[key] === true && (
+                            {key in expandedMenu &&
+                                expandedMenu[key] === true && (
                                     <ShowObject
                                         entry={data[key]}
                                         setShowingPage={setShowingPage}
                                         className="navbar__sublist"
                                         isSubmenu={true}
                                     />
-                            )}
+                                )}
                         </li>
                     );
                 } else {

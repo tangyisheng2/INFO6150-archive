@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import '../css/form.css';
-function Form({setCurrentUser}) {
+function Form({ setCurrentUser }) {
     const [formData, setFormData] = useState({});
-    const [errorMsg, setErrorMsg] = useState("");
+    const [errorMsg, setErrorMsg] = useState('');
     const saveData = (key, val) => {
         setFormData({ ...formData, [key]: val });
     };
@@ -71,11 +71,11 @@ function Form({setCurrentUser}) {
         return inCompleteSectionName.length === 0;
     };
     return (
-        <main id='main' className="form">
+        <main id="main" className="form">
             <div className="form__errmsg-list">{errorMsg}</div>
             <form className="form__body" method="post" action="#">
                 <label>
-                    Name:<span className='required__mark'>*</span>
+                    Name:<span className="required__mark">*</span>
                     <input
                         type="text"
                         id="name"
@@ -90,7 +90,7 @@ function Form({setCurrentUser}) {
                     />
                 </label>
                 <label>
-                    Email:<span className='required__mark'>*</span>
+                    Email:<span className="required__mark">*</span>
                     <input
                         type="email"
                         id="email"
@@ -105,7 +105,7 @@ function Form({setCurrentUser}) {
                     />
                 </label>
                 <label>
-                    Tier:<span className='required__mark'>*</span>
+                    Tier:<span className="required__mark">*</span>
                     <select
                         name="tier"
                         id="tier"
@@ -135,7 +135,8 @@ function Form({setCurrentUser}) {
                             }
                         }}
                     />
-                    <span>I agree the TOS.</span><span className='required__mark'>*</span>
+                    <span>I agree the TOS.</span>
+                    <span className="required__mark">*</span>
                 </label>
                 <button
                     className="newsletter__submit"
@@ -143,8 +144,7 @@ function Form({setCurrentUser}) {
                     onClick={() => {
                         if (checkComplete(formData)) {
                             // todo Complete the send request logic
-                            setCurrentUser(formData
-                                )
+                            setCurrentUser(formData);
                         }
                     }}
                 >

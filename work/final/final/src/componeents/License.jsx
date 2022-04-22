@@ -2,7 +2,7 @@ import '../css/home.css';
 import '../css/licence.css';
 function Licence() {
     return (
-        <main id='main' className="main">
+        <main id="main" className="main">
             <ul className="licence__list">
                 <li key={'photo'} className="image__licence">
                     <p>

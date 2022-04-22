@@ -1,14 +1,10 @@
 import '../css/header.css';
 function Header({ setShowingPage, pageData }) {
     return (
-
-        <header
-            // onClick={() => {
-            //     setShowingPage(pageData.Home);
-            // }}
-            className="header"
-        >
-            <a href="#main" className="skip-link">Skip to content</a>
+        <header className="header">
+            <a href="#main" className="skip-link">
+                Skip to content
+            </a>
             <div className="icon-mask">
                 <span>📷</span>
             </div>

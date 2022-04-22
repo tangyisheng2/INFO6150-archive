@@ -1,4 +1,4 @@
-function CurrentUser({user}) {
+function CurrentUser({ user }) {
     const name = user['name'];
     if (name) {
         return <div className="current-user">Welcome back {name}</div>;
