@@ -122,7 +122,6 @@
 .home-accordion-item__body.hide {
     max-height: 0;
     opacity: 0;
-    /* overflow: auto; */
 }
 
 .home-accordion-item__body {
