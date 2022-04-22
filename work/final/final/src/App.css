@@ -25,3 +25,13 @@
 @media (prefers-reduced-motion: no-preference) {
 
 }
+
+@media (min-width:800px) {
+  #main {
+    justify-self: center;
+
+    width: 100%;
+
+    max-width: 1000px;
+  }
+}
