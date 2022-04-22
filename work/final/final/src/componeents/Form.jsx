@@ -43,15 +43,15 @@ function Form({ setCurrentUser }) {
     // @return: bool
     const checkComplete = (data) => {
         const inCompleteSectionName = [];
-        if (!('name' in data) && data['name'].length) {
+        if (!(data['name'] !== undefined && data['name'].length > 0)) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the name';
         }
-        if (!('email' in data) && data['email'].length) {
+        if (!(data['email'] !== undefined && data['email'].length > 0)) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the email';
         }
-        if (!('tier' in data) || !data.tier.length) {
+        if (!(data['tier'] !== undefined && data['email'].length > 0)) {
             inCompleteSectionName[inCompleteSectionName.length] =
                 'Please check the tier';
         }
@@ -71,7 +71,7 @@ function Form({ setCurrentUser }) {
         return inCompleteSectionName.length === 0;
     };
     return (
-        <main id="main" className="form">
+        <main id="main" className="form__main">
             <div className="form__errmsg-list">{errorMsg}</div>
             <form className="form__body" method="post" action="#">
                 <label>
