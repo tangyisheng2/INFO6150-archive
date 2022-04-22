@@ -50,6 +50,10 @@
     padding: 1rem 0;
 }
 
+.home__accordion > h1 {
+    margin-bottom: 1rem;
+}
+
 .home-accordion__list {
     list-style: none;
 }
