@@ -48,6 +48,7 @@
     align-self: center;
 
     width: max-content;
+    height: 2rem;
 }
 
 .comments__list {
