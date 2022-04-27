@@ -3,7 +3,6 @@ export function fetchComments() {
     return new Promise((resolve) => {
         setTimeout(resolve, 500);
     })
-        .catch(() => Promise.reject('networkError'))
         .then(() =>
             fetch(endPointUrl, {
                 method: 'GET',
