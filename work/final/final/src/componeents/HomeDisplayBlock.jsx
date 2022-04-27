@@ -18,7 +18,7 @@ function HomeDisplayBlock({
                 >
                     Learn More
                 </a>
-                <img src={image} alt="" srcset="" className="preview__image" />
+                <img src={image} alt="" srcSet="" className="preview__image" />
             </div>
         </li>
     );
