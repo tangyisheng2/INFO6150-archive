@@ -5,8 +5,8 @@ import SunSet from '../../img/monterey/IMG_7426.jpeg';
 
 function Monterey() {
     return (
-        <main id="main" class="monterey__main">
-            <h1 class="h1__title">Introduction</h1>
+        <main id="main" className="monterey__main">
+            <h1 className="h1__title">Introduction</h1>
             <p>
                 Monterey (Spanish: Monterrey; Ohlone: Aacistak[11]) is a city
                 located in Monterey County on the southern edge of Monterey Bay
@@ -38,10 +38,10 @@ function Monterey() {
                 Music and Arts Festival, and the annual Monterey Jazz Festival.
             </p>
 
-            <img src={SeaView1} alt="Sea View" srcset="" />
-            <img src={SeaView2} alt="Sea View" srcset="" />
-            <img src={PeppleBeachGolf} alt="Pepple Beach Golf" srcset="" />
-            <img src={SunSet} alt="Sun Set" srcset="" />
+            <img src={SeaView1} alt="Sea View" srcSet="" />
+            <img src={SeaView2} alt="Sea View" srcSet="" />
+            <img src={PeppleBeachGolf} alt="Pepple Beach Golf" srcSet="" />
+            <img src={SunSet} alt="Sun Set" srcSet="" />
         </main>
     );
 }

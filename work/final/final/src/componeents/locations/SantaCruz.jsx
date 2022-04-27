@@ -5,7 +5,7 @@ import Sunset from '../../img/santa_cruz/IMG_6136.jpeg';
 function SantaCruz() {
     return (
         <main id="main" className="santacruz__main">
-            <h1 class="h1__title">Introduction</h1>
+            <h1 className="h1__title">Introduction</h1>
             <p>
                 Santa Cruz (Spanish for 'Holy Cross') is the county seat and
                 largest city of Santa Cruz County, California. As of the 2020
@@ -38,10 +38,10 @@ function SantaCruz() {
                 agriculture. Late in the 19th century, Santa Cruz established
                 itself as a beach resort community.
             </p>
-            <img src={Lighthouse} alt="Lighthouse" srcset="" />
-            <img src={BeachView} alt="Beach View" srcset="" />
-            <img src={OceanView} alt="Ocean View" srcset="" />
-            <img src={Sunset} alt="Sunset" srcset="" />
+            <img src={Lighthouse} alt="Lighthouse" srcSet="" />
+            <img src={BeachView} alt="Beach View" srcSet="" />
+            <img src={OceanView} alt="Ocean View" srcSet="" />
+            <img src={Sunset} alt="Sunset" srcSet="" />
         </main>
     );
 }
