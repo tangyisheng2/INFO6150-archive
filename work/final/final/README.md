@@ -12,6 +12,20 @@ This project displays some of my photos while travelling as well as a breif intr
   - Expanding sub-navigation-menu on the `NavBar` named Locations
   - Accordion on Home page – `FAQ` section
 - Loading Indicator: User can see a loading indicator on `Comment Board` section on the first load
+- Animation & Transition
+  - Navigation Bar Sub-menu uses a CSS animation
+  - Home - FAQ uses a CSS transition of `max-height`
+- Form validation: Forms in both `Comment Board` and `Newsletter` have from validation from JavaScript
+  - The Validation will run after user key in anything in the field, and if the validation fails, the border goes red and will notify user with an error message when trying to submit
+  - The email validation uses a Regex from stackoverflow: https://stackoverflow.com/questions/41348459/regex-in-react-email-validation
+
+
+## Section introduction
+
+- Home: Home page of the app, with 3 cards showing the Location and a FAQ section
+- Locations: The detailed introduction to 3 beatiful scenes in California with some pictures by myself
+- Comment Board: A comment board connected to self-hosted RESTful service, feel free to lieave a comment about your thought. (Hope my server will not crash xD)
+- Newsletter: A `form` allows you to subscribe to the newsletter. Afte you submit your information, the app will show a welcome message under the navigation bar.
 
 ## Image Licencing
 1. Photos are licensed under the CC BY-NC-SA 4.0 License.Copyright 1999-2022 Yisheng Tang.
