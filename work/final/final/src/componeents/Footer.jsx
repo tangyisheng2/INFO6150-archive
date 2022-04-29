@@ -1,4 +1,5 @@
 import '../css/footer.css';
+import CurrentTime from './CurrentTime';
 function Footer({ setShowingPage, pageData }) {
     return (
         <footer className="footer">
@@ -20,6 +21,7 @@ function Footer({ setShowingPage, pageData }) {
                         </li>
                     );
                 })}
+                <li><CurrentTime /></li>
             </ul>
         </footer>
     );
