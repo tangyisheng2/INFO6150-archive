@@ -11,6 +11,7 @@ This project displays some of my photos while travelling as well as a breif intr
 - Complex UI:
   - Expanding sub-navigation-menu on the `NavBar` named Locations
   - Accordion on Home page – `FAQ` section
+  - A realtime clock on the bottom of the page
 - Loading Indicator: User can see a loading indicator on `Comment Board` section on the first load
 - Animation & Transition
   - Navigation Bar Sub-menu uses a CSS animation
