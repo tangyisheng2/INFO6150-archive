@@ -1,0 +1,37 @@
+.footer {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--font-color);
+
+    padding: 1rem;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+.footer a {
+    color: var(--highlight-color);
+    cursor: pointer;
+
+    text-decoration: underline transparent;
+}
+
+.footer a:hover,
+.footer a:focus-within {
+    color: var(--font-color);
+    text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .footer a {
+        transition: text-decoration 0.25s, color 0.25s;
+    }
+}

@@ -1,0 +1,183 @@
+.home__main,
+.monterey__main,
+.halfmoonbay__main,
+.santacruz__main {
+    color: var(--font-color);
+
+    margin: 3rem 1rem;
+    font-size: larger;
+    line-height: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__main p,
+.monterey__main p,
+.halfmoonbay__main p,
+.santacruz__main p {
+    margin: 0.3rem 0;
+}
+
+.monterey__main p,
+.halfmoonbay__main p,
+.santacruz__main p {
+    text-align: left;
+}
+
+.home__main img,
+.monterey__main img,
+.halfmoonbay__main img,
+.santacruz__main img {
+    max-width: 100%;
+}
+
+.monterey__main img,
+.halfmoonbay__main img,
+.santacruz__main img {
+    margin: 1rem;
+}
+
+.home__main a {
+    color: var(--font-color);
+}
+
+.home__main a:hover,
+.home__main a:focus-within {
+    color: var(--highlight-color);
+}
+
+.home__accordion {
+    border-top: 2px solid var(--highlight-color);
+
+    padding: 1rem 0;
+}
+
+.home__accordion > h1 {
+    margin-bottom: 1rem;
+}
+
+.home-accordion__list {
+    list-style: none;
+}
+
+.home-accordion__item {
+    border: 2px solid var(--highlight-color);
+}
+
+.home-accordion-item__body {
+    border-top: 1px solid var(--highlight-color);
+}
+
+.home-display__list {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+.home-display__list {
+    list-style: none;
+}
+
+.home-display-block__div {
+    height: 30rem;
+}
+
+.home-display-block__div {
+    background-size: cover;
+    resize: horizontal;
+    background-position: center;
+
+    text-align: center;
+}
+
+.home-display-block__title {
+    text-transform: uppercase;
+}
+
+.home-display-block__description {
+    width: 100%;
+    text-align: center;
+}
+
+.home-display-block__link {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.home-accordion__title.expand::after {
+    margin-left: auto;
+    text-align: right;
+    content: " –";
+    color: var(--font-color);
+}
+
+.home-accordion__title.collapse::after {
+    content: " +";
+    color: var(--font-color);
+}
+
+.preview__image {
+    height: 20rem;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.home__accordion {
+    text-align: left;
+
+    width: 100%;
+}
+
+.home__accordion h1 {
+    text-align: center;
+}
+
+.home-accordion__title {
+    background-color: transparent;
+
+    padding: 0.5rem;
+    width: 100%;
+    border: none;
+
+    justify-self: left;
+    text-align: left;
+    color: var(--font-color);
+
+    font-size: larger;
+
+    cursor: pointer;
+}
+
+.home-accordion-item__body.hide {
+    max-height: 0;
+    opacity: 0;
+}
+
+.home-accordion-item__body {
+    max-height: 20rem;
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home__main a {
+        transition: text-decoration 0.25s, color 0.25s;
+    }
+
+    .home-accordion-item__body {
+        transition: max-height 0.5s;
+    }
+
+    .home__main img:hover,
+    .monterey__main img:hover,
+    .halfmoonbay__main img:hover,
+    .santacruz__main img:hover {
+        box-shadow: 0px 0px 20px var(--highlight-color);
+
+        transition: box-shadow 0.2s 0.1s;
+    }
+}

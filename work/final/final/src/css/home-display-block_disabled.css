@@ -1,0 +1,51 @@
+.main {
+    margin: 0;
+}
+
+.home-display__list {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+.home-display__list{
+    list-style: none;
+}
+
+.home-display-block__div{
+    height: 30rem;
+
+}
+
+.home-display-block__div {
+    background-size: cover;
+    resize: horizontal;
+    background-position: center;
+
+    text-align: center;
+}
+
+.home-display-block__description {
+    width: 100%;
+    text-align: center;
+}
+
+.preview__image {
+    height: 20rem;
+    width: 100vw;
+    object-fit: cover;
+}
+
+/* .home-display-block__div.monterey {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/07/MontereyBayAquariumBackview_%28cropped%29.jpg);
+}
+
+.home-display-block__div.halfmoonbay {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/83/NorCal2018_Beach_and_Cliff_at_Ritz-Carlton_Half_Moon_Bay_S0675078.jpg);
+}
+
+.home-display-block__div.santacruz {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/11/Downtown_santa_cruz%2C_cropped_%28cropped%29.jpg);
+} */

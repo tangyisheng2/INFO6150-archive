@@ -1,0 +1,10 @@
+.current-user {
+    border-bottom: 1px solid var(--highlight-color);
+
+    margin: 1rem auto 0 auto;
+
+    width: fit-content;
+
+    font-size: larger;
+}
+

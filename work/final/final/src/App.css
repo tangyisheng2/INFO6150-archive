@@ -1,0 +1,37 @@
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --highlight-color: #ba9f65;
+  --background-color: #170607;
+  --font-color: #f5f5f7;
+}
+
+.app {
+  text-align: center;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+
+}
+
+@media (min-width:800px) {
+  #main {
+    justify-self: center;
+
+    width: 100%;
+
+    max-width: 1000px;
+  }
+}
